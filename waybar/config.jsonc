@@ -1,0 +1,55 @@
+[
+    {
+    "output": ["eDP-1"],
+    "position": "top",
+    "include": [
+        "~/.config/waybar/modules-config.jsonc"
+    ],
+    "modules-left": [
+        "hyprland/window",
+        "mpris"
+    ],
+    "modules-center": [
+        "hyprland/workspaces",
+        "clock"
+        // "group/quicklaunch"
+    ],
+    "modules-right": [
+        "tray",
+        "memory",
+        "wireplumber",
+        "backlight",
+        "bluetooth",
+        "network",
+        "battery",
+        "group/power"
+    ]
+},
+{
+    "output": ["HDMI-A-1", "DP-1"],
+    "include": [
+        "~/.config/waybar/modules-config.jsonc"
+    ],
+    "modules-left": [
+        "hyprland/workspaces"
+    ],
+    "modules-center": [
+        "hyprland/window"
+    ],
+    "modules-right":[
+        "clock"
+    ],
+
+    "hyprland/workspaces": {
+        "all-outputs": true,
+        "warp-on-scroll": true,
+        "enable-bar-scroll": true,
+        "disable-scroll-wraparound": false
+    },
+    "hyprland/window": {
+        "format": "{title}",
+        "max-length":35,
+        "all-outputs": true
+    }
+}
+]

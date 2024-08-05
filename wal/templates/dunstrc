@@ -1,0 +1,105 @@
+# See dunst(5) for all configuration options
+
+[global]
+monitor = 0
+follow = mouse
+width = 400
+height = 250
+origin = top-right
+offset = 10x10
+scale = 1
+notification_limit = 20
+
+progress_bar = true
+progress_bar_height = 10
+progress_bar_frame_width = 1
+progress_bar_min_width = 150
+progress_bar_max_width = 300
+progress_bar_corner_radius = 22
+progress_bar_corners = all
+
+icon_corner_radius = 0
+icon_corners = all
+
+indicate_hidden = yes
+transparency = 50
+separator_height = 2
+
+padding = 15
+horizontal_padding = 10
+text_icon_padding = 0
+
+frame_width = 1
+frame_color = "#{color5.strip}"
+
+gap_size = 0
+separator_color = auto
+
+sort = yes
+
+font = Open Sans Regular 10
+line_height = 15
+markup = full
+
+# The format of the message.  Possible variables are:
+#   %a  appname
+#   %s  summary
+#   %b  body
+#   %i  iconname (including its path)
+#   %I  iconname (without its path)
+#   %p  progress value if set ([  0%] to [100%]) or nothing
+#   %n  progress value if set without any extra characters
+#   %%  Literal %
+# Markup is allowed
+format = "<b>%a</b>\n%b"
+
+alignment = left
+vertical_alignment = center
+
+show_age_threshold = 60
+ellipsize = middle
+ignore_newline = no
+stack_duplicates = true
+hide_duplicate_count = false
+show_indicators = yes
+enable_recursive_icon_lookup = true
+icon_theme = Adwaita
+icon_position = left
+min_icon_size = 32
+max_icon_size = 64
+sticky_history = yes
+history_length = 20
+
+dmenu = /usr/bin/dmenu -p dunst
+browser = /usr/bin/xdg-open
+always_run_script = true
+
+title = Dunst
+class = Dunst
+
+corner_radius = 10
+corners = all
+
+ignore_dbusclose = false
+force_xwayland = false
+
+force_xinerama = false
+mouse_left_click = close_current
+mouse_middle_click = do_action, close_current
+mouse_right_click = close_all
+
+frame_color = "#89b4fa"
+separator_color= frame
+
+[urgency_low]
+background = "#{background.strip}"
+foreground = "#{foreground.strip}"
+
+[urgency_normal]
+background = "#{background.strip}"
+foreground = "#foreground.strip"
+
+[urgency_critical]
+background = "#{background.strip}"
+foreground = "#foreground.strip"
+frame_color = "#{color6.strip}"
