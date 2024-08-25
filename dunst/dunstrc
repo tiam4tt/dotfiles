@@ -30,7 +30,7 @@ horizontal_padding = 10
 text_icon_padding = 0
 
 frame_width = 1
-frame_color = "#BAB0A5"
+frame_color = "#9F78C4"
 
 gap_size = 0
 separator_color = auto
@@ -92,14 +92,14 @@ frame_color = "#89b4fa"
 separator_color= frame
 
 [urgency_low]
-background = "#0b0f0e"
-foreground = "#dbd3cb"
+background = "#0A0C18"
+foreground = "#9ccadf"
 
 [urgency_normal]
-background = "#0b0f0e"
+background = "#0A0C18"
 foreground = "#foreground.strip"
 
 [urgency_critical]
-background = "#0b0f0e"
+background = "#0A0C18"
 foreground = "#foreground.strip"
-frame_color = "#C4B290"
+frame_color = "#2887A9"

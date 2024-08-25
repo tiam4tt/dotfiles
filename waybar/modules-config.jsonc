@@ -139,6 +139,7 @@
     "modules": [
       "custom/power",
 
+      "custom/logout",
       "custom/suspend",
       "custom/reboot",
       "custom/shutdown",
@@ -170,6 +171,12 @@
     "tooltip": true,
     "tooltip-format": "shutdown",
     "on-click": "(sleep 5 && shutdown now) & (notify-send --urgency=critical --expire-time=5000 --wait 'System Shutdown' 'The system will shutdown in 5 seconds, click to cancel' && pkill sleep)",
+  },
+  "custom/logout": {
+    "format": "󰗽",
+    "tooltip": true,
+    "tooltip-format": "logout",
+    "on-click": "loginctl terminate-session $XDG_SESSION_ID",
   },
 
   ///////////////// group: quick launch ///////////////

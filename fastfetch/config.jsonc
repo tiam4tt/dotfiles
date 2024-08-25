@@ -11,7 +11,7 @@
   "logo": {
     "source": "~/.config/fastfetch/icons/uwu.txt",
     "padding": {
-      "top": 3,
+      "top": 1,
       "left": 1,
       "right": 3,
     },
