@@ -86,7 +86,7 @@
     "tooltip-format-wifi": " {bandwidthDownBytes} |  {bandwidthUpBytes} | {essid}",
     "tooltip-format-disconnected": "Disconnected",
     "on-click": "nm-connection-editor",
-    "on-click-left": "alacritty -e nmtui",
+    "on-click-right": "alacritty -e nmtui",
   },
   "battery": {
     "states": {

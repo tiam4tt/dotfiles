@@ -7,6 +7,7 @@
 ![preview1](./assets/preview1.png)
 ![preview2](./assets/preview2.png)
 ![preview3](./assets/preview3.png)
+![preview4](./assets/preview4.png)
 
 ## Specs
 - **WM**: Hyprland
