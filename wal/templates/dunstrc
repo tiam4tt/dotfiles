@@ -51,7 +51,7 @@ markup = full
 #   %n  progress value if set without any extra characters
 #   %%  Literal %
 # Markup is allowed
-format = "<b>%a</b>\n%b"
+format = "<b>%a</b>\n%s\n%b"
 
 alignment = left
 vertical_alignment = center
@@ -97,9 +97,9 @@ foreground = "#{foreground.strip}"
 
 [urgency_normal]
 background = "#{background.strip}"
-foreground = "#foreground.strip"
+foreground = "#{foreground.strip}"
 
 [urgency_critical]
 background = "#{background.strip}"
-foreground = "#foreground.strip"
+foreground = "#{foreground.strip}"
 frame_color = "#{color6.strip}"

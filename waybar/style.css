@@ -1,6 +1,11 @@
-@import "./colors-waybar.css";
+@import "colors-waybar.css";
 * {
-    font-family: FiraCode Nerd Font, FontAwesome, Roboto, Arial, sans-serif;
+    font-family:
+        FiraCode Nerd Font,
+        FontAwesome,
+        Roboto,
+        Arial,
+        sans-serif;
     border: none;
     font-size: 14px;
     border-radius: 20;
@@ -26,9 +31,9 @@
 }
 
 tooltip {
-  background: @background;
-  color: @color5;
-  padding: 0 10;
+    background: @background;
+    color: @color5;
+    padding: 0 10;
 }
 
 window#waybar {
@@ -37,14 +42,12 @@ window#waybar {
     border-radius: 0;
     border: none;
     margin: 0;
-
 }
 
 window#waybar.empty #window {
-    background-color : transparent;
+    background-color: transparent;
     color: transparent;
 }
-
 
 /* --------workspaces-------- */
 
@@ -77,40 +80,26 @@ window#waybar.empty #window {
     border-radius: 15px;
     min-width: 40px;
     transition: all 0.3s ease-in-out;
-    opacity:1;
+    opacity: 1;
 }
 
 #workspaces button:hover {
     color: @color5;
     background: @color0;
     border-radius: 15px;
-    opacity:0.7;
+    opacity: 0.7;
     animation: none;
-/*    animation-name: blink;
-    animation-duration: 0.5s;
-    animation-timing-function: steps(12);
-    animation-iteration-count: infinite;
-    animation-direction: alternate;*/
 }
-
-/*@keyframes blink {
-    to {
-        background-color: @background;
-        color: @color11;
-    }
-}*/
 
 /* --------modules-------- */
 /*--------GENERAL STYLING-------*/
 #window,
 #mpris,
 #mpris.paused,
-
 #clock,
 #custom-gemini,
 #custom-spotify,
 #custom-messenger,
-
 #tray,
 #memory,
 #wireplumber,
@@ -149,7 +138,8 @@ window#waybar.empty #window {
 }
 #custom-suspend,
 #custom-shutdown,
-#custom-reboot {
+#custom-reboot,
+#custom-logout {
     padding: 0 15;
     margin: 4 3;
     background: @color5;
@@ -166,7 +156,6 @@ window#waybar.empty #window {
     padding-left: 10;
 }
 
-
 #window,
 #mpris,
 #mpris.paused,
@@ -175,8 +164,8 @@ window#waybar.empty #window {
 }
 /* --------mpris-------- */
 #mpris.stopped {
-  background: transparent;
-  color: transparent;
+    background: transparent;
+    color: transparent;
 }
 
 /*#window, #mpris {
