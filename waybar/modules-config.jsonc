@@ -163,14 +163,14 @@
     "format": "󰜉",
     "tooltip": true,
     "tooltip-format": "reboot",
-    "on-click": "(sleep 5 && reboot) & (notify-send --urgency=critical --expire-time=5000 --wait 'System reboot' 'The system will reboot in 5 seconds, click to cancel' && pkill sleep)",
+    "on-click": "(sleep 5 && reboot) & (notify-send -a System --urgency=critical --expire-time=5000 --wait 'System reboot' 'The system will reboot in 5 seconds, click to cancel' && pkill sleep)",
   },
 
   "custom/shutdown": {
     "format": "⏻",
     "tooltip": true,
     "tooltip-format": "shutdown",
-    "on-click": "(sleep 5 && shutdown now) & (notify-send --urgency=critical --expire-time=5000 --wait 'System Shutdown' 'The system will shutdown in 5 seconds, click to cancel' && pkill sleep)",
+    "on-click": "(sleep 5 && shutdown now) & (notify-send -a System --urgency=critical --expire-time=5000 --wait 'System Shutdown' 'The system will shutdown in 5 seconds, click to cancel' && pkill sleep)",
   },
   "custom/logout": {
     "format": "󰗽",

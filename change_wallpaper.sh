@@ -4,7 +4,6 @@ wallpaper_dir="~/Pictures/wallpapers"
 
 read_wallpaper_path(){
   check_path="${wallpaper_dir#"~/"}"
-  echo "$check_path"
   if [[ -d "$check_path" ]]; then   
     ls "$check_path"
   else
@@ -39,6 +38,9 @@ message=(
 echo -e "$message"
 
 read_wallpaper_path
+
+#---------------COMMANDS-----------------#
+
 # hyprpaper
 content="preload = $wallpaper_path\nwallpaper = ,$wallpaper_path"
 cd ~
