@@ -42,9 +42,8 @@ read_wallpaper_path
 #---------------COMMANDS-----------------#
 
 # hyprpaper
-content="preload = $wallpaper_path\nwallpaper = ,$wallpaper_path"
-cd ~
-echo -n -e "$content" > .config/hypr/hyprpaper.conf
+hyprctl hyprpaper preload "$wallpaper_path"
+hyprctl hyprpaper wallpaper ",$wallpaper_path"
 
 # generate colorscheme
 walpath="${wallpaper_path#'~/'}"
