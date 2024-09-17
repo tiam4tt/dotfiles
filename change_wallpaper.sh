@@ -4,7 +4,7 @@ wallpaper_dir="~/Pictures/wallpapers"
 
 read_wallpaper_path(){
   check_path="${wallpaper_dir#"~/"}"
-  if [[ -d "$check_path" ]]; then   
+  if [[ -d "$check_path" ]]; then
     ls "$check_path"
   else
     echo "Error: Path not found."
@@ -19,7 +19,7 @@ read_wallpaper_path(){
   check_path="${wallpaper_path#"~/"}"
   echo ""
   if [[ -f "$check_path" ]]; then
-    echo -e "\nWallpaper path found!" 
+    echo -e "\nWallpaper path found!"
 
   else
     echo "Error: Wallpaper file not found."
@@ -42,9 +42,9 @@ read_wallpaper_path
 #---------------COMMANDS-----------------#
 
 # hyprpaper
-hyprctl hyprpaper preload "$wallpaper_path"
-hyprctl hyprpaper wallpaper ",$wallpaper_path"
-
+content="preload = $wallpaper_path\nwallpaper = ,$wallpaper_path"
+cd ~
+echo -n -e "$content" > .config/hypr/hyprpaper.conf
 # generate colorscheme
 walpath="${wallpaper_path#'~/'}"
 wal -s -t -i "$walpath"
@@ -60,5 +60,4 @@ cp -rf ~/.cache/wal/dunstrc ~/.config/dunst/dunstrc
 
 # reload
 pkill waybar & hyprctl dispatch exec waybar
-pkill hyprpaper; hyprctl dispatch exec hyprpaper
 hyprctl reload

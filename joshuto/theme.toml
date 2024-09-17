@@ -12,8 +12,8 @@ lscolors_enabled = false
 
 # Style of active tab & current directory
 [tabs.styles.active]
-bg = "#9F78C4"
-fg = "#0A0C18"
+bg = "#C5B5F1"
+fg = "#241a2a"
 bold = true
 
 # Style of inactive tabs
@@ -58,12 +58,12 @@ fg = "white"
 
 # For directories
 [directory]
-fg = "#9F78C4"
+fg = "#C5B5F1"
 bold = true
 
 # For symbolic links
 [link]
-fg = "#2887A9"
+fg = "#A2C4DC"
 bold = true
 
 # For socket files
@@ -77,7 +77,7 @@ bold = true
 
 # Files marked as executable
 [executable]
-fg = "#2887A9"
+fg = "#A2C4DC"
 bold = true
 
 # Invalid symbolic links (pointing to non-existing target)
