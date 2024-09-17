@@ -10,7 +10,7 @@
 ![preview4](./assets/preview4.png)
 
 ## Specs
-- **WM**: Hyprland
+- **TWC**: Hyprland
 - **Editor**: Neovim
 - **Fetch**: fastfetch
 - **Launcher**: Fuzzel
