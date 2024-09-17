@@ -8,24 +8,24 @@
         sans-serif;
     border: none;
     font-size: 14px;
-    border-radius: 20;
+    border-radius: 20px;
 }
 /* ---------modules group--------- */
 
 /* css margin: top right bottom left; */
 
 .modules-right {
-    margin: 5 5 0 5;
+    margin: 5px 5px 0 5px;
     padding: 0;
     background-color: @background;
 }
 .modules-center {
-    margin: 5 0 0 0;
+    margin: 5px 0 0 0;
     padding: 0 0;
     background-color: transparent;
 }
 .modules-left {
-    margin: 5 0 0 5;
+    margin: 5px 0 0 5px;
     padding: 0 0;
     background-color: transparent;
 }
@@ -33,7 +33,7 @@
 tooltip {
     background: @background;
     color: @color5;
-    padding: 0 10;
+    padding: 0 10px;
 }
 
 window#waybar {
@@ -108,8 +108,8 @@ window#waybar.empty #window {
 #network,
 #battery,
 #custom-power {
-    padding: 0 5;
-    margin: 0 5;
+    padding: 0 5px;
+    margin: 0 5px;
     background-color: @background;
     color: @color5;
     box-shadow: none;
@@ -117,7 +117,7 @@ window#waybar.empty #window {
 }
 /*-----------SPECIFIC STYLING-----------*/
 #wireplumber.muted {
-    margin: 4 3;
+    margin: 4px 3px;
     background-color: @color2;
     color: @background;
 }
@@ -125,42 +125,42 @@ window#waybar.empty #window {
 #custom-gemini,
 #custom-spotify,
 #custom-messenger {
-    padding: 0 20 0 15;
-    margin: 0 3;
+    padding: 0 20px 0 15px;
+    margin: 0 3px;
 }
 #custom-messenger {
-    padding-right: 15;
+    padding-right: 15px;
 }
 
 #custom-power {
-    padding: 0 15 0 0;
+    padding: 0 15px 0 0;
     background: @background;
 }
 #custom-suspend,
 #custom-shutdown,
 #custom-reboot,
 #custom-logout {
-    padding: 0 15;
-    margin: 4 3;
+    padding: 0 15px;
+    margin: 4px 3px;
     background: @color5;
     color: @color0;
     border: none;
 }
 
 #tray {
-    margin-left: 13;
+    margin-left: 13px;
 }
 
 #battery {
-    padding-right: 18;
-    padding-left: 10;
+    padding-right: 18px;
+    padding-left: 10px;
 }
 
 #window,
 #mpris,
 #mpris.paused,
 #clock {
-    padding: 0 15;
+    padding: 0 15px;
 }
 /* --------mpris-------- */
 #mpris.stopped {

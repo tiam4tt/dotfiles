@@ -64,5 +64,6 @@ fi
 
 # reload
 pkill dunst
-hyprctl -q reload
+pkill waybar && hyprctl -q dispatch exec waybar
 pkill hyprpaper && hyprctl -q dispatch exec hyprpaper
+hyprctl -q reload
