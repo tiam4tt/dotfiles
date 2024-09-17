@@ -48,3 +48,7 @@ Wallpaper directory can be modified in the script. By default is set to `~/Pictu
 |Super + L_Ctrl + Shift + Backspace| Shutdown|
 |Super + 0-9| Switch workspace|
 |Super + Shift + 0-9| Move window to workspace|
+|Super + arrow keys| Move focus|
+|ALT + TAB| Next workspace|
+|ALT + Shift + TAB| Previous workspace|
+|XF86 controls keys| Volume, brightness, etc|
