@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 #change your wallpaper directory here
 wallpaper_dir="~/Pictures/wallpapers"
 
@@ -19,7 +19,7 @@ read_wallpaper_path(){
   check_path="${wallpaper_path#"~/"}"
   echo ""
   if [[ -f "$check_path" ]]; then
-    echo -e "\nWallpaper path found!"
+    echo -e "Wallpaper path found!"
 
   else
     echo "Error: Wallpaper file not found."
@@ -40,14 +40,13 @@ echo -e "$message"
 read_wallpaper_path
 
 #---------------COMMANDS-----------------#
-
 # hyprpaper
 content="preload = $wallpaper_path\nwallpaper = ,$wallpaper_path"
 cd ~
 echo -n -e "$content" > .config/hypr/hyprpaper.conf
 # generate colorscheme
 walpath="${wallpaper_path#'~/'}"
-wal -s -t -i "$walpath"
+wal -i "$walpath"
 
 # update waybar
 cp -rf ~/.cache/wal/colors-waybar.css ~/.config/waybar/
@@ -55,10 +54,15 @@ cp -rf ~/.cache/wal/colors-waybar.css ~/.config/waybar/
 # update joshuto
 cp -rf ~/.cache/wal/theme.toml ~/.config/joshuto/theme.toml
 
-#change dunstrc
-cp -rf ~/.cache/wal/dunstrc ~/.config/dunst/dunstrc
+echo ""
+echo "A L L   D O N E !"
+
+read -p "Clear the terminal? (Y/n):" clear_terminal
+if [[ "$clear_terminal" == "Y" || "$clear_terminal" == "y" ]]; then
+  clear
+fi
 
 # reload
-pkill waybar && hyprctl dispatch exec waybar
-pkill hyprpaper && hyprctl dispatch exec hyprpaper
-hyprctl reload
+pkill dunst
+hyprctl -q reload
+pkill hyprpaper && hyprctl -q dispatch exec hyprpaper

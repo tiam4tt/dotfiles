@@ -30,7 +30,7 @@ horizontal_padding = 10
 text_icon_padding = 0
 
 frame_width = 1
-frame_color = "#{color5.strip}"
+frame_color = "#{foreground.strip}"
 
 gap_size = 0
 separator_color = auto
@@ -88,7 +88,6 @@ mouse_left_click = close_current
 mouse_middle_click = do_action, close_current
 mouse_right_click = close_all
 
-frame_color = "#89b4fa"
 separator_color= frame
 
 [urgency_low]

@@ -43,6 +43,7 @@ Wallpaper directory can be modified in the script. By default is set to `~/Pictu
 |Super + Shift + Q| Toggle window split direction|
 |Super + Shift + S| Regional screenshot|
 |Print| Full screenshot|
+|Super + Shift + T| Toggle touchpad (remember to change your touchpad device name) |
 |Super + LMB| Reposition|
 |Super + RMB| Resize|
 |Super + L_Ctrl + Shift + Backspace| Shutdown|
