@@ -59,5 +59,6 @@ cp -rf ~/.cache/wal/theme.toml ~/.config/joshuto/theme.toml
 cp -rf ~/.cache/wal/dunstrc ~/.config/dunst/dunstrc
 
 # reload
-pkill waybar & hyprctl dispatch exec waybar
+pkill waybar && hyprctl dispatch exec waybar
+pkill hyprpaper && hyprctl dispatch exec hyprpaper
 hyprctl reload
