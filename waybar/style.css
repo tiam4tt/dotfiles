@@ -8,7 +8,7 @@
         sans-serif;
     border: none;
     font-size: 14px;
-    border-radius: 20px;
+    border-radius: 8px;
 }
 /* ---------modules group--------- */
 
@@ -25,23 +25,23 @@
     background-color: transparent;
 }
 .modules-left {
-    margin: 5px 0 0 5px;
-    padding: 0 0;
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-bottom: 0;
+    margin-right: 0;
+    padding: 0;
     background-color: transparent;
 }
 
 tooltip {
     background: @background;
-    color: @color5;
+    color: @color15;
     padding: 0 10px;
 }
 
 window#waybar {
-    /* background: linear-gradient(180deg, rgba(0,0,0,0.5), rgba(0,0,0,0)); */
+    /* background: linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)); */
     background: transparent;
-    border-radius: 0;
-    border: none;
-    margin: 0;
 }
 
 window#waybar.empty #window {
@@ -54,39 +54,34 @@ window#waybar.empty #window {
 #workspaces {
     background: @background;
     margin: 0;
-    padding: 0 1px;
-    border-radius: 20px;
-    border: 0px;
+    padding: 0;
     font-weight: bold;
     font-style: normal;
     opacity: 1;
     font-size: 16px;
-    color: @color5;
+    color: @color15;
 }
 #workspaces button {
     padding: 0px 5px;
     margin: 4px 3px;
-    border-radius: 15px;
+    /* border-radius: 8px; */
     border: 0px;
-    color: @color8;
+    color: @foreground;
     background-color: @background;
     transition: all 0.3s ease-in-out;
-    opacity: 0.6;
+    opacity: 0.4;
 }
 
 #workspaces button.active {
-    color: @color0;
-    background: @color5;
-    border-radius: 15px;
+    color: @background;
+    background: @color15;
     min-width: 40px;
-    transition: all 0.3s ease-in-out;
     opacity: 1;
 }
 
 #workspaces button:hover {
-    color: @color5;
+    color: @color15;
     background: @color0;
-    border-radius: 15px;
     opacity: 0.7;
     animation: none;
 }
@@ -108,12 +103,11 @@ window#waybar.empty #window {
 #network,
 #battery,
 #custom-power {
-    padding: 0 5px;
+    padding: 0 7px;
     margin: 0 5px;
     background-color: @background;
-    color: @color5;
+    color: @color15;
     box-shadow: none;
-    border: none;
 }
 /*-----------SPECIFIC STYLING-----------*/
 #wireplumber.muted {
@@ -132,23 +126,15 @@ window#waybar.empty #window {
     padding-right: 15px;
 }
 
-#custom-power {
-    padding: 0 15px 0 0;
-    background: @background;
-}
 #custom-suspend,
 #custom-shutdown,
 #custom-reboot,
 #custom-logout {
     padding: 0 15px;
     margin: 4px 3px;
-    background: @color5;
+    background: @color15;
     color: @color0;
     border: none;
-}
-
-#tray {
-    margin-left: 13px;
 }
 
 #battery {
@@ -168,16 +154,6 @@ window#waybar.empty #window {
     color: transparent;
 }
 
-/*#window, #mpris {
-    color: @color5;
-}
-#wireplumber, #backlight {
-    color: @color5;
-}
-#bluetooth, #network {
-    color: @color7;
-}*/
-
 /* --------battery-------- */
 
 #battery.charging,
@@ -186,5 +162,5 @@ window#waybar.empty #window {
 #battery.critical,
 #battery.warning {
     background-color: @background;
-    color: @color5;
+    color: @color15;
 }

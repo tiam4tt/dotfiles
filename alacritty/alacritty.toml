@@ -1,21 +1,23 @@
-import = [
-  # "~/.config/alacritty/catppuccin-latte.toml"
-  # "~/.config/alacritty/catppuccin-frappe.toml"
-  # "~/.config/alacritty/catppuccin-macchiato.toml"
-  # "~/.config/alacritty/catppuccin-mocha.toml"
-  "~/.cache/wal/colors-alacritty.toml"
-]
+import = ["~/.config/alacritty/color-schemes/astrology_vibrant_stellar.toml"]
+
 [env]
 TERM = "xterm-256color"
-# WINDOW
+
 [window]
-padding = {x = 0, y = 0}
+padding = { x = 5, y = 5 }
 dynamic_padding = true
-opacity = 0.9
+opacity = 1
 blur = true
-# FONT
+
 [font]
 size = 11
-normal = {family = "MesloLGM Nerd Font Mono", style = "Regular"}
-italic = {family = "MesloLGM Nerd Font Mono", style = "Italic"}
-bold = {family = "MesloLGM Nerd Font Mono", style = "Bold"}
+normal = { family = "FiraCode Nerd Font", style = "Medium" }
+italic = { family = "FiraCode Nerd Font", style = "Italic" }
+bold = { family = "FiraCode Nerd Font", style = "Bold" }
+
+[cursor]
+style = { shape = "Beam", blinking = "On" }
+blink_interval = 320
+
+[mouse]
+hide_when_typing = true

@@ -22,6 +22,10 @@
 ```bash
 cp .config/change_wallpaper.sh change_wallpaper.sh && ln -s .config/change_wallpaper.sh change_wallpaper.sh
 ```
+Grant permission to execute
+```bash
+chmod +x change_wallpaper
+```
 
 ### How to use
 ```bash
@@ -36,7 +40,7 @@ Wallpaper directory can be modified in the script. By default is set to `~/Pictu
 |Super + C| Close window|
 |Super + X| Open terminal|
 |Super + L| Lock|
-|Super + W| Web browser (Firefox)|
+|Super + W| Web browser|
 |Super + E| File manager (dolphin)|
 |Super + V| Clipboard|
 |Super + T| Toggle floating window|
@@ -53,3 +57,9 @@ Wallpaper directory can be modified in the script. By default is set to `~/Pictu
 |ALT + TAB| Next workspace|
 |ALT + Shift + TAB| Previous workspace|
 |XF86 controls keys| Volume, brightness, etc|
+
+## Additional step8
+Grant execute permission to `hypr/scripts/touchpad-toggle.sh`
+```bash
+chmod +x ~/.config/hypr/scripts/touchpad-toggle.sh
+```

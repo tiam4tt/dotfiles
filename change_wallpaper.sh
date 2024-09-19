@@ -4,6 +4,7 @@ wallpaper_dir="~/Pictures/wallpapers"
 
 read_wallpaper_path(){
   check_path="${wallpaper_dir#"~/"}"
+
   if [[ -d "$check_path" ]]; then
     ls "$check_path"
   else
@@ -20,7 +21,6 @@ read_wallpaper_path(){
   echo ""
   if [[ -f "$check_path" ]]; then
     echo -e "Wallpaper path found!"
-
   else
     echo "Error: Wallpaper file not found."
     exit 1
@@ -48,22 +48,19 @@ echo -n -e "$content" > .config/hypr/hyprpaper.conf
 walpath="${wallpaper_path#'~/'}"
 wal -i "$walpath"
 
-# update waybar
+#####################
+### APPLY CHANGES ###
+#####################
+
+# waybar
 cp -rf ~/.cache/wal/colors-waybar.css ~/.config/waybar/
 
-# update joshuto
+# joshuto
 cp -rf ~/.cache/wal/theme.toml ~/.config/joshuto/theme.toml
 
-echo ""
-echo "A L L   D O N E !"
-
-read -p "Clear the terminal? (Y/n):" clear_terminal
-if [[ "$clear_terminal" == "Y" || "$clear_terminal" == "y" ]]; then
-  clear
-fi
-
-# reload
 pkill dunst
-pkill waybar && hyprctl -q dispatch exec waybar
+pkill waybar
 pkill hyprpaper && hyprctl -q dispatch exec hyprpaper
 hyprctl -q reload
+
+clear
