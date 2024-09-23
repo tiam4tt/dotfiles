@@ -6,7 +6,7 @@ TERM = "xterm-256color"
 [window]
 padding = { x = 5, y = 5 }
 dynamic_padding = true
-opacity = 1
+opacity = 0.9
 blur = true
 
 [font]
@@ -16,8 +16,8 @@ italic = { family = "FiraCode Nerd Font", style = "Italic" }
 bold = { family = "FiraCode Nerd Font", style = "Bold" }
 
 [cursor]
-style = { shape = "Beam", blinking = "On" }
-blink_interval = 320
+style = { shape = "Underline", blinking = "Always" }
+vi_mode_style = { shape = "Underline", blinking = "Always" }
 
 [mouse]
 hide_when_typing = true

@@ -1,28 +1,27 @@
 {
   "layer": "bottom",
-  "position": "top",
-  "height": 40,
   "spacing": 4,
+  "exclusive": true,
+  "passthrough": false,
+  "gtk-layer-shell": true,
   "reload_style_on_change": true,
 
   // ----------- MODULES CONFIG ------------
 
+  "wlr/taskbar": {
+    "format": "{icon}",
+    "icon-size": 18,
+    "spacing": 3,
+    "tooltip-format": "{title}",
+    "on-click-middle": "close",
+    "on-click": "activate",
+    "ignore-list": ["Alacritty"],
+  },
+
   //////////// hyprland modules ////////////
-  "hyprland/window": {
-    "format": "{initialTitle}",
-    "max-length": 35,
-    "all-outputs": true,
-  },
-
-  "hyprland/workspaces": {
-    "all-outputs": true,
-    "warp-on-scroll": true,
-    "enable-bar-scroll": true,
-    "disable-scroll-wraparound": true,
-  },
 
   "hyprland/window": {
-    "format": "{initialTitle}",
+    "format": "{initialTitle} - {title}",
     "max-length": 35,
     "all-outputs": true,
   },
@@ -57,9 +56,8 @@
       "stopped": " ",
     },
     "tooltip-format": "{title} - {artist} | {length}",
-    // "dynamic-order": ["title", "artist","album","position","length"],
-    "dynamic-order": ["title", "artist"],
-    "ignored-players": ["firefox"],
+    "dynamic-order": ["title", "artist", "album", "position", "length"],
+    // "ignored-players": ["firefox"],
 
     "on-click": "playerctl play-pause",
     "on-scroll-up": "playerctl next",
@@ -79,9 +77,10 @@
   },
 
   "network": {
-    "format-wifi": "󰤢",
+    "format-wifi": " {icon}",
     "format-ethernet": "󰈀",
     "format-disconnected": "󰤠",
+    "format-icons": ["󰤯 ", "󰤟 ", "󰤢 ", "󰤢 ", "󰤨 "],
     "interval": 5,
     "tooltip-format-wifi": " {bandwidthDownBytes} |  {bandwidthUpBytes} | {essid}",
     "tooltip-format-disconnected": "Disconnected",
@@ -129,7 +128,7 @@
     "on-click": "blueman-manager",
   },
 
-  ///////////////// group: system ///////////////
+  ///////////////// group: power ///////////////
   "group/power": {
     "orientation": "inherit",
     "drawer": {
@@ -177,31 +176,5 @@
     "tooltip": true,
     "tooltip-format": "logout",
     "on-click": "loginctl terminate-session $XDG_SESSION_ID",
-  },
-
-  ///////////////// group: quick launch ///////////////
-  "group/quicklaunch": {
-    "orientation": "inherit",
-    "drawer": false,
-    "modules": ["custom/spotify", "custom/gemini", "custom/messenger"],
-  },
-
-  "custom/messenger": {
-    "format": "",
-    "tooltip": true,
-    "tooltip-format": "launch Facebook Messenger",
-    "on-click": "chromium --app=https://www.facebook.com/messages/",
-  },
-  "custom/gemini": {
-    "format": "",
-    "tooltip": true,
-    "tooltip-format": "Launch Google Gemini",
-    "on-click": "chromium --app=https://gemini.google.com/app",
-  },
-  "custom/spotify": {
-    "format": "",
-    "tooltip": true,
-    "tooltip-format": "Launch Spotify",
-    "on-click": "spotify",
   },
 }

@@ -1,15 +1,16 @@
-<h1 align=center>I call this "HyprArch"</h1>
+<h1 align=center>Hyprland + Arch config</h1>
 
-> A simple Hyprland config with adaptive color scheme, packed with just the bare minimum to keep you away from all the "improved quality of life" shenanigans.
+> A simple Hyprland config with adaptive color scheme, packed with just the bare minimum to keep you away from all the useless "improved quality of life" shenanigans.
 
 ## Preview
 
 ![preview1](./assets/preview1.png)
 ![preview2](./assets/preview2.png)
-![preview3](./assets/preview3.png)
 ![preview4](./assets/preview4.png)
+![preview3](./assets/preview3.png)
+![preview5](./assets/preview5.png)
 
-## Specs
+## Info
 - **TWC**: Hyprland
 - **Editor**: Neovim
 - **Fetch**: fastfetch
@@ -17,17 +18,22 @@
 - **Lockscreen**: hyprlock
 - **Color scheme generator**: pywal
 - **Fonts**: JetBrains Mono Nerd Font, FiraCode Nerd Font
+- **Music Player**: Tauon Music Box
+
+## Notes
+- There are 2 styles of waybar to use: bottom & top. To choose which bar to use, change the `-s` and `-c` of waybar execution command in `~/.config/hypr/autostart/autostart.conf`. Use `hyprctl reload` to apply the change.
 
 ## Create `change_wallpaper.sh` symbolic link
 ```bash
+cd ~ & \
 cp .config/change_wallpaper.sh change_wallpaper.sh && ln -s .config/change_wallpaper.sh change_wallpaper.sh
 ```
 Grant permission to execute
 ```bash
 chmod +x change_wallpaper
 ```
-
 ### How to use
+In home directory, run:
 ```bash
 ./change_wallpaper.sh
 ```
@@ -58,7 +64,7 @@ Wallpaper directory can be modified in the script. By default is set to `~/Pictu
 |ALT + Shift + TAB| Previous workspace|
 |XF86 controls keys| Volume, brightness, etc|
 
-## Additional step8
+## Additional steps
 Grant execute permission to `hypr/scripts/touchpad-toggle.sh`
 ```bash
 chmod +x ~/.config/hypr/scripts/touchpad-toggle.sh

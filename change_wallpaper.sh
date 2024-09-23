@@ -46,21 +46,20 @@ cd ~
 echo -n -e "$content" > .config/hypr/hyprpaper.conf
 # generate colorscheme
 walpath="${wallpaper_path#'~/'}"
-wal -i "$walpath"
+wal -s -t -i "$walpath"
 
 #####################
 ### APPLY CHANGES ###
 #####################
 
 # waybar
-cp -rf ~/.cache/wal/colors-waybar.css ~/.config/waybar/
+cp -rf ~/.cache/wal/colors-waybar.css ~/.config/waybar/topbar
 
 # joshuto
 cp -rf ~/.cache/wal/theme.toml ~/.config/joshuto/theme.toml
 
 pkill dunst
-pkill waybar
 pkill hyprpaper && hyprctl -q dispatch exec hyprpaper
+pkill waybar
 hyprctl -q reload
-
 clear
