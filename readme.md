@@ -21,7 +21,7 @@
 - **Music Player**: Tauon Music Box
 
 ## Notes
-- There are 2 styles of waybar to use: bottom & top. To choose which bar to use, change the `-s` and `-c` of waybar execution command in `~/.config/hypr/autostart/autostart.conf`. Use `hyprctl reload` to apply the change.
+- There are 2 styles of waybar to use: bottom & top. To choose which bar to use, change the `-s` and `-c` of waybar execution command in `~/.config/hypr/autostart/autostart.conf`.
 
 ## Create `change_wallpaper.sh` symbolic link
 ```bash
@@ -43,15 +43,19 @@ Wallpaper directory can be modified in the script. By default is set to `~/Pictu
 | Keybind | Action |
 | --- | --- |
 |Super| Open Launcher|
-|Super + C| Close window|
+|Super + Q| Close window|
+|Super + P| Power Menu|
+|Super + R| Quick run commands|
 |Super + X| Open terminal|
 |Super + L| Lock|
 |Super + W| Web browser|
-|Super + E| File manager (dolphin)|
+|Super + E| File manager|
 |Super + V| Clipboard|
 |Super + T| Toggle floating window|
+|Super + M| Logout|
 |Super + Shift + Q| Toggle window split direction|
 |Super + Shift + S| Regional screenshot|
+|Super + Shift + F| Toggle fullscreen|
 |Print| Full screenshot|
 |Super + Shift + T| Toggle touchpad (remember to change your touchpad device name) |
 |Super + LMB| Reposition|
@@ -65,7 +69,7 @@ Wallpaper directory can be modified in the script. By default is set to `~/Pictu
 |XF86 controls keys| Volume, brightness, etc|
 
 ## Additional steps
-Grant execute permission to `hypr/scripts/touchpad-toggle.sh`
+Grant execute permission to scripts in `~/.config/hypr/scripts/`
 ```bash
-chmod +x ~/.config/hypr/scripts/touchpad-toggle.sh
+chmod +x ~/.config/hypr/scripts/<filename>
 ```

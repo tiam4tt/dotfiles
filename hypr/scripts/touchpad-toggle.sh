@@ -1,7 +1,7 @@
 #!/bin/sh
 
 TOUCHPAD="asuf1204:00-2808:0104-touchpad"
-export STATUS_FILE="$XDG_RUNTIME_DIR/touchpad.status"
+export STATUS_FILE="$HOME/touchpad.status"
 
 enable_touchpad(){
   printf "true" > $STATUS_FILE
@@ -11,7 +11,7 @@ enable_touchpad(){
 
 disable_touchpad(){
   printf "false" > $STATUS_FILE
-  hyprctl notify 5 2000 "rgb(ff1ea3)" "fontsize:16 Touchpad disabled"
+  hyprctl notify 5 2000 "rgb(ff1a00)" "fontsize:16 Touchpad disabled"
   hyprctl keyword device[$TOUCHPAD]:enabled false
 }
 

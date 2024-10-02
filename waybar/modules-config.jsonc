@@ -57,7 +57,7 @@
     },
     "tooltip-format": "{title} - {artist} | {length}",
     "dynamic-order": ["title", "artist", "album", "position", "length"],
-    // "ignored-players": ["firefox"],
+    "ignored-players": ["firefox", "zen-alpha"],
 
     "on-click": "playerctl play-pause",
     "on-scroll-up": "playerctl next",
@@ -73,7 +73,7 @@
   "backlight": {
     "scroll-step": 5,
     "format": "{icon} {percent}",
-    "format-icons": ["󰃞", "󰃟", "󰃝", "󰃠"],
+    "format-icons": ["󰃞 ", "󰃟 ", "󰃝 ", "󰃠 "],
   },
 
   "network": {
@@ -93,12 +93,12 @@
       "warning": 30,
       "critical": 15,
     },
-    "format": "{capacity} {icon}",
+    "format": "{capacity}  {icon}",
     "format-full": "{icon}",
     "format-charging": "{capacity} ",
     "format-plugged": "{capacity} ",
     "format-alt": "{icon} {time}",
-    "format-icons": ["", "", "", ""],
+    "format-icons": [" ", " ", " ", " "],
   },
 
   "wireplumber": {
@@ -106,7 +106,7 @@
     "scroll-step": 5, // %, can be a float
     "format": "{icon} {volume}",
     "format-bluetooth": "{icon} {volume}",
-    "format-icons": ["", "", " "],
+    "format-icons": [" ", " ", " "],
     "format-muted": " ",
     "on-click-middle": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
     "on-click": "pavucontrol",
