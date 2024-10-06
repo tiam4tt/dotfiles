@@ -78,6 +78,9 @@ Wallpaper directory by default points to `~/Pictures/wallpapers/`
 ## Configure to your preference
 
 **Monitors**: `~/.config/hypr/monitors/monitors.conf`
+
 **ENV**: `~/.config/hypr/env/env.conf`
+
 **Input devices & touchpad scripts**: `~/.config/hypr/input/input.conf`, `~/.config/hypr/scripts/touchpad-status.sh`, `~/.config/hypr/scripts/touchpad-toggle.sh`
+
 **Hyprlock wallpaper**: `~/.config/hypr/hyprlock.conf`
