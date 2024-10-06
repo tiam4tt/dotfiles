@@ -3,13 +3,11 @@
 > A simple Hyprland config with adaptive color scheme, packed with just the bare minimum to keep you away from all the useless "improved quality of life" shenanigans.
 
 # Sections
-> [Preview](#preview)
 
-> [Info](#info)
-
-> [Grant execute permission to scripts in `~/.config/hypr/scripts/`](#grant-execute-permission-to-scripts-in-confighyprscripts)
-
-> [Keybinds](#keybinds)
+ [Preview](#preview)
+ [Info](#info)
+ [Grant execute permission to scripts in `~/.config/hypr/scripts/`](#grant-execute-permission-to-scripts-in-confighyprscripts)
+ [Keybinds](#keybinds)
 
 ## Preview
 
@@ -25,6 +23,8 @@
 |**OS**| Arch Linux|
 |**WM** | Hyprland|
 |**Editor**| Neovim|
+|**Browser**| Zen Browser|
+|**File Manager**| Thunar|
 |**Fetch**| fastfetch|
 |**Launcher**| Fuzzel|
 |**Terminal**| Alacritty|
@@ -70,3 +70,9 @@ Wallpaper directory by default points to `~/Pictures/wallpapers/`
 |ALT + Shift + TAB| Previous workspace|
 |XF86 controls keys| Volume, brightness, etc|
 
+## Configure to your preference
+
+**Monitors**: `~/.config/hypr/monitors/monitors.conf`
+**ENV**: `~/.config/hypr/env/env.conf`
+**Input devices & touchpad scripts**: `~/.config/hypr/input/input.conf`, `~/.config/hypr/scripts/touchpad-status.sh`, `~/.config/hypr/scripts/touchpad-toggle.sh`
+**Hyprlock wallpaper**: `~/.config/hypr/hyprlock.conf`
