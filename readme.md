@@ -4,8 +4,11 @@
 
 # Sections
 > [Preview](#preview)
+
 > [Info](#info)
+
 > [Grant execute permission to scripts in `~/.config/hypr/scripts/`](#grant-execute-permission-to-scripts-in-confighyprscripts)
+
 > [Keybinds](#keybinds)
 
 ## Preview
