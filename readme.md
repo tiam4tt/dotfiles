@@ -20,7 +20,7 @@
 ![preview2](./assets/preview2.png)
 ![preview4](./assets/preview4.png)
 ![preview3](./assets/preview3.png)
-![preview5](./assets/preview5.png)
+![preview4](./assets/preview4.png)
 
 ## Info
 |**Specification**|**Detail**|
@@ -41,6 +41,9 @@
 |**Music Player**| Tauon Music Box|
 
 ## Grant execute permission to scripts in `~/.config/hypr/scripts/`
+
+In case the scripts are not executable, `chmod` them.
+
 ```bash
 chmod +x $HOME/.config/hypr/scripts/*
 ```

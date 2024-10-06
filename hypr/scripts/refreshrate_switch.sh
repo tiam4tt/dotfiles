@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 DISPLAY="eDP-1"
 AC_STATUS=$(cat /sys/class/power_supply/ACAD/online)

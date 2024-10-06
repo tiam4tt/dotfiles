@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 TOUCHPAD="asuf1204:00-2808:0104-touchpad"
 export STATUS_FILE="$HOME/touchpad.status"

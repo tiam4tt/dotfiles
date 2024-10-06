@@ -1,6 +1,12 @@
+#!/bin/bash
+
 wallpaper_dir=$HOME/Pictures/wallpapers
 menu=$(ls $wallpaper_dir)
 choice=$(printf "%s\n" "${menu[@]}" | fuzzel --dmenu -i -p "Wallpaper: ")
+
+if [ -z $choice]; then
+    exit 1
+fi
 
 content="preload = $wallpaper_dir/$choice\nwallpaper = ,$wallpaper_dir/$choice"
 

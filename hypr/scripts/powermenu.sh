@@ -1,3 +1,5 @@
+#!/bin/bash
+
 menu=("Shutdown" "Reboot" "Suspend" "Lock" "Logout" "Toggle Refresh Rate" "Change wallpaper" "Waybar Profile")
 
 choice=$(printf "%s\n" "${menu[@]}" | fuzzel  --dmenu -i -p "Power Menu: ")
