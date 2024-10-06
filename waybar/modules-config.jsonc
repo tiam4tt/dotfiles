@@ -15,7 +15,7 @@
     "tooltip-format": "{title}",
     "on-click-middle": "close",
     "on-click": "activate",
-    "ignore-list": ["Alacritty"],
+    "ignore-list": ["Alacritty"]
   },
 
   //////////// hyprland modules ////////////
@@ -23,26 +23,26 @@
   "hyprland/window": {
     "format": "{initialTitle} - {title}",
     "max-length": 35,
-    "all-outputs": true,
+    "all-outputs": true
   },
   "hyprland/workspaces": {
     "all-outputs": true,
     "warp-on-scroll": true,
     "enable-bar-scroll": true,
-    "disable-scroll-wraparound": true,
+    "disable-scroll-wraparound": true
   },
 
   //////////////// other modules ///////////////
 
   "tray": {
     "icon-size": 18,
-    "spacing": 10,
+    "spacing": 10
   },
 
   "memory": {
     "format": "  {percentage}%",
     "interval": 5,
-    "on-click": "alacritty -e btop",
+    "on-click": "alacritty -e btop"
   },
 
   "mpris": {
@@ -53,7 +53,7 @@
     "status-icons": {
       "paused": " ",
       "playing": " ",
-      "stopped": " ",
+      "stopped": " "
     },
     "tooltip-format": "{title} - {artist} | {length}",
     "dynamic-order": ["title", "artist", "album", "position", "length"],
@@ -61,19 +61,19 @@
 
     "on-click": "playerctl play-pause",
     "on-scroll-up": "playerctl next",
-    "on-scroll-down": "playerctl previous",
+    "on-scroll-down": "playerctl previous"
   },
 
   "clock": {
     "format": "{:%I:%M %p • %a %d/%m}",
     "tooltip": true,
-    "tooltip-format": "<tt>{calendar}</tt>",
+    "tooltip-format": "<tt>{calendar}</tt>"
   },
 
   "backlight": {
     "scroll-step": 5,
     "format": "{icon} {percent}",
-    "format-icons": ["󰃞 ", "󰃟 ", "󰃝 ", "󰃠 "],
+    "format-icons": ["󰃞 ", "󰃟 ", "󰃝 ", "󰃠 "]
   },
 
   "network": {
@@ -85,20 +85,21 @@
     "tooltip-format-wifi": " {bandwidthDownBytes} |  {bandwidthUpBytes} | {essid}",
     "tooltip-format-disconnected": "Disconnected",
     "on-click": "nm-connection-editor",
-    "on-click-right": "alacritty -e nmtui",
+    "on-click-right": "alacritty -e nmtui"
   },
   "battery": {
     "states": {
       "good": 95,
       "warning": 30,
-      "critical": 15,
+      "critical": 15
     },
-    "format": "{capacity} {icon}",
+    "format": "{icon}",
     "format-full": "{icon}",
     "format-charging": "{capacity} ",
     "format-plugged": "{capacity} ",
     "format-alt": "{icon} {time}",
-    "format-icons": [" ", " ", " ", " "],
+    "tooltip-format": "{capacity}%, about {time} left",
+    "format-icons": [" ", " ", " ", " "]
   },
 
   "wireplumber": {
@@ -109,7 +110,7 @@
     "format-icons": [" ", " ", " "],
     "format-muted": " ",
     "on-click-middle": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
-    "on-click": "pavucontrol",
+    "on-click": "pavucontrol"
   },
 
   "bluetooth": {
@@ -125,7 +126,7 @@
     "tooltip-format-connected": "{device_enumerate}",
     "tooltip-format-enumerate-connected": "{device_alias}\t{device_battery_percentage}%",
 
-    "on-click": "blueman-manager",
+    "on-click": "blueman-manager"
   },
 
   ///////////////// group: power ///////////////
@@ -133,7 +134,7 @@
     "orientation": "inherit",
     "drawer": {
       "transition-duration": 500,
-      "transition-left-to-right": false,
+      "transition-left-to-right": false
     },
     "modules": [
       "custom/power",

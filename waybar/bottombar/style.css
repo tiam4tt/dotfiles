@@ -1,0 +1,134 @@
+@import "color-waybar.css";
+
+/* reset all styles */
+* {
+    font-family:
+        JetBrains Mono Nerd Font,
+        FiraCode Nerd Font,
+        Roboto,
+        Arial,
+        sans-serif;
+    min-height: 18px;
+    /* font-size: 14px; */
+    border: none;
+    border-radius: 6px;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+    text-shadow: none;
+    background-color: transparent;
+    color: @beige;
+}
+
+/* general */
+
+tooltip,  
+menu,
+#workspaces,
+#clock,
+#mpris,
+#tray,
+#wireplumber,
+#backlight,
+#bluetooth,
+#network,
+#battery,
+#custom-power {
+    background: @raisin-black;
+    padding-bottom: 7px;
+    padding-top: 7px;
+    margin: 0;
+}
+
+tooltip {
+  border: 1px solid @beige;
+}
+
+.modules-right,
+.modules-center,
+.modules-left {
+    padding: 0 5px;
+    margin: 0 5px;
+}
+
+/* LEFT MODULES */
+
+#workspaces {
+    padding: 0 8px 0 3px;
+    border-radius: 22px;
+    color: transparent;
+    font-weight: bold;
+    opacity: 1;
+}
+#workspaces button {
+    background: transparent;
+    min-width: 30px;
+    transition: all 0.3s ease-in-out;
+    opacity: 1;
+}
+#workspaces button.active {
+    opacity: 1;
+}
+#workspaces button.active box label {
+    color: @vista-blue;
+}
+
+#taskbar button {
+    padding: 3px 8px;
+    transition: all 0.3s ease-in-out;
+}
+#taskbar button.active {
+    background: alpha(@onyx, 0.8);
+}
+
+/* CENTER MODULES */
+
+#clock,
+#mpris {
+    padding: 0 15px;
+}
+
+/* RIGHT MODULES */
+
+#tray {
+    padding: 0 8px;
+}
+#wireplumber,
+#backlight {
+    padding: 0 8px;
+}
+
+#bluetooth,
+#network {
+    color: @vista-blue;
+}
+#bluetooth {
+    min-width: 20px;
+    padding: 0 10px;
+}
+#network {
+    min-width: 30px;
+    padding: 0 7px 0 2px;
+    margin: 0 2px;
+}
+#battery {
+    color: @mint;
+    min-width: 30px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+#custom-power {
+    padding: 0 15px 0 9px;
+    color: @antiflash;
+}
+
+#custom-suspend,
+#custom-logout,
+#custom-reboot,
+#custom-shutdown {
+    background: @crayola;
+    color: @raisin-black;
+    padding: 0 5px;
+    min-width: 25px;
+    margin: 0 2px;
+}

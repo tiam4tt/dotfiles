@@ -1,0 +1,165 @@
+@import "colors-waybar.css";
+* {
+    font-family:
+        FiraCode Nerd Font,
+        FontAwesome,
+        Roboto,
+        Arial,
+        sans-serif;
+    border: none;
+    min-height: 20px;
+    border-radius: 8px;
+}
+/* ---------modules group--------- */
+
+/* css margin: top right bottom left; */
+
+.modules-right {
+    margin: 5px 5px 0 5px;
+    padding: 0;
+    background-color: @background;
+}
+.modules-center {
+    margin: 5px 0 0 0;
+    padding: 0 0;
+    background-color: transparent;
+}
+.modules-left {
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-bottom: 0;
+    margin-right: 0;
+    padding: 0;
+    background-color: transparent;
+}
+
+tooltip {
+    background: @background;
+    color: @color15;
+    padding: 0 10px;
+}
+
+window#waybar {
+    /* background: linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)); */
+    background-color: transparent;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+window#waybar.empty #window {
+    background-color: transparent;
+    color: transparent;
+}
+
+/* --------workspaces-------- */
+
+#workspaces {
+    background: @background;
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    font-style: normal;
+    opacity: 1;
+    font-size: 16px;
+    color: @color15;
+}
+#workspaces button {
+    padding: 0px 5px;
+    margin: 5px;
+    border-radius: 6px;
+    border: none;
+    color: @foreground;
+    background-color: @background;
+    transition: all 0.3s ease-in-out;
+    opacity: 0.4;
+}
+
+#workspaces button.active {
+    color: @background;
+    background: @color15;
+    min-width: 40px;
+    opacity: 1;
+}
+
+#workspaces button:hover {
+    color: @color15;
+    background: @color0;
+    opacity: 1;
+    animation: none;
+}
+
+/* --------modules-------- */
+/*--------GENERAL STYLING-------*/
+#window,
+#mpris,
+#mpris.paused,
+#clock,
+#custom-gemini,
+#custom-spotify,
+#custom-messenger,
+#tray,
+#memory,
+#wireplumber,
+#backlight,
+#bluetooth,
+#network,
+#battery,
+#custom-power {
+    padding: 0 5px;
+    margin: 0 4px;
+    background-color: @background;
+    color: @color15;
+    box-shadow: none;
+}
+/*-----------SPECIFIC STYLING-----------*/
+#wireplumber.muted {
+    margin: 4px 3px;
+    background-color: @color2;
+    color: @background;
+}
+
+#custom-gemini,
+#custom-spotify,
+#custom-messenger {
+    padding: 0 20px 0 15px;
+    margin: 0 3px;
+}
+#custom-messenger {
+    padding-right: 15px;
+}
+
+#custom-power {
+    padding-right: 15px;
+}
+
+#custom-suspend,
+#custom-shutdown,
+#custom-reboot,
+#custom-logout {
+    padding: 0 15px;
+    margin: 4px 3px;
+    background: @color15;
+    color: @color0;
+    border: none;
+}
+
+
+#window,
+#mpris,
+#mpris.paused,
+#clock {
+    padding: 0 15px;
+}
+
+/* --------battery-------- */
+
+#battery.charging,
+#battery.plugged,
+#battery.good,
+#battery.critical,
+#battery.warning {
+    background-color: @background;
+    color: @color15;
+}
