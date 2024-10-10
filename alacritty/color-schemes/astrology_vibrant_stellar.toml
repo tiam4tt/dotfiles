@@ -1,10 +1,10 @@
 [colors.primary]
-# background = "#20242D"
 background = "#10131a"
 foreground = "#CAC6FE"
 
 [colors.normal]
-black = "#20242D"
+black = "#45475a"
+# black = "#20242D"
 red = "#FF8E8E"
 green = "#ABFAF1"
 yellow = "#FCAD3F"
@@ -14,7 +14,18 @@ cyan = "#8CE8FF"
 white = "#C9CCCD"
 
 [colors.bright]
-black = "#141921"
+# black = "#141921"
+black = "#45475a"
+red = "#FF8E8E"
+green = "#8AF3FE"
+yellow = "#FCAD3F"
+blue = "#69B4F9"
+magenta = "#6D9AF3"
+cyan = "#A5A2FF"
+white = "#CAC6FE"
+
+[colors.dim]
+black = "#45475a"
 red = "#FF8E8E"
 green = "#8AF3FE"
 yellow = "#FCAD3F"

@@ -117,9 +117,17 @@ tooltip {
     padding-left: 5px;
     padding-right: 5px;
 }
+
+#battery.critical {
+  color: @sunglow;
+}
+#battery.warning {
+  color: @bittersweet;
+}
+
 #custom-power {
     padding: 0 15px 0 9px;
-    color: @antiflash;
+    color: @periwinkle;
 }
 
 #custom-suspend,

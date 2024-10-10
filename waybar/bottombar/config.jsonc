@@ -3,8 +3,8 @@
     "output": ["eDP-1", "DP-1", "HDMI-A-1"],
     "include": ["~/.config/waybar/modules-config.jsonc"],
     "position": "bottom",
-    "margin-top": 2,
-    "margin-bottom": 3,
+    "margin-top": 0,
+    "margin-bottom": 5,
 
     "modules-left": ["hyprland/workspaces", "wlr/taskbar"],
     "modules-center": ["mpris", "clock"],

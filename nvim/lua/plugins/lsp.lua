@@ -11,13 +11,12 @@ return {
       require("mason-lspconfig").setup({
         ensure_installed = {
           'lua_ls',
+          'pylsp',
           'html',
+          'cssls',
           'marksman',
           'dockerls',
-          'pylsp',
-          'cssls',
           'jsonls',
---          'hyprls'
         }
       })
 
@@ -31,7 +30,6 @@ return {
       lspconfig.pylsp.setup({capabilities = capabilities})
       lspconfig.cssls.setup({capabilities = capabilities})
       lspconfig.jsonls.setup({capabilities = capabilities})
---      lspconfig.hyprls.setup({capabilities = capabilities})
     end
   }
 }

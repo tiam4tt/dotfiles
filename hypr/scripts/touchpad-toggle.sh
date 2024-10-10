@@ -5,13 +5,13 @@ export STATUS_FILE="$HOME/touchpad.status"
 
 enable_touchpad(){
   printf "true" > $STATUS_FILE
-  hyprctl notify 5 2000 0 "fontsize:16 Touchpad enabled"
+  hyprctl notify 5 2000 0 "fontsize:20 Touchpad enabled"
   hyprctl keyword device[$TOUCHPAD]:enabled true
 }
 
 disable_touchpad(){
   printf "false" > $STATUS_FILE
-  hyprctl notify 5 2000 "rgb(ff1a00)" "fontsize:16 Touchpad disabled"
+  hyprctl notify 5 2000 "rgb(ff1a00)" "fontsize:20 Touchpad disabled"
   hyprctl keyword device[$TOUCHPAD]:enabled false
 }
 

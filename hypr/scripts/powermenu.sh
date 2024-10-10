@@ -1,6 +1,6 @@
 #!/bin/bash
 
-menu=("Shutdown" "Reboot" "Suspend" "Lock" "Logout" "Toggle Refresh Rate" "Change wallpaper" "Waybar Profile")
+menu=("Shutdown" "Reboot" "Suspend" "Lock" "Logout" "AC/BAT Refresh Rate" "Change wallpaper" "Waybar Profile")
 
 choice=$(printf "%s\n" "${menu[@]}" | fuzzel  --dmenu -i -p "Power Menu: ")
 
@@ -20,7 +20,7 @@ case $choice in
     Logout)
         loginctl terminate-session $XDG_SESSION_ID
         ;;
-    "Toggle Refresh Rate")
+    "AC/BAT Refresh Rate")
       hyprctl dispatch exec "$HOME/.config/hypr/scripts/refreshrate_switch.sh"
         ;;
     "Change wallpaper")
