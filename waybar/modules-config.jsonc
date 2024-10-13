@@ -73,7 +73,9 @@
   "backlight": {
     "scroll-step": 5,
     "format": "{icon} {percent}",
-    "format-icons": ["󰃞 ", "󰃟 ", "󰃝 ", "󰃠 "]
+    "format-icons": ["󰃞 ", "󰃟 ", "󰃝 ", "󰃠 "],
+    "on-click": "brightnessctl set 10%-",
+    "on-click-right": "brightnessctl set +10%"
   },
 
   "network": {
@@ -133,6 +135,7 @@
   "group/power": {
     "orientation": "inherit",
     "drawer": {
+      "click-to-reveal": true,
       "transition-duration": 500,
       "transition-left-to-right": false
     },
@@ -142,14 +145,15 @@
       "custom/logout",
       "custom/suspend",
       "custom/reboot",
-      "custom/shutdown",
-    ],
+      "custom/shutdown"
+    ]
   },
 
   "custom/power": {
     "format": "",
     "tooltip": true,
     "tooltip-format": "I use Arch, btw.",
+    "justify": "center"
   },
 
   "custom/suspend": {
@@ -157,25 +161,29 @@
     "tooltip": true,
     "tooltip-format": "sleep",
     "on-click": "systemctl suspend",
+    "justify": "center"
   },
 
   "custom/reboot": {
     "format": "󰜉",
     "tooltip": true,
     "tooltip-format": "reboot",
-    "on-click": "(sleep 5 && reboot) & (notify-send -a System --urgency=critical --expire-time=5000 --wait 'System reboot' 'The system will reboot in 5 seconds, click to cancel' && pkill sleep)",
+    "justify": "center",
+    "on-click": "(sleep 5 && reboot) & (notify-send -a System --urgency=critical --expire-time=5000 --wait 'System reboot' 'The system will reboot in 5 seconds, click to cancel' && pkill sleep)"
   },
 
   "custom/shutdown": {
     "format": "⏻",
     "tooltip": true,
     "tooltip-format": "shutdown",
-    "on-click": "(sleep 5 && shutdown now) & (notify-send -a System --urgency=critical --expire-time=5000 --wait 'System Shutdown' 'The system will shutdown in 5 seconds, click to cancel' && pkill sleep)",
+    "justify": "center",
+    "on-click": "(sleep 5 && shutdown now) & (notify-send -a System --urgency=critical --expire-time=5000 --wait 'System Shutdown' 'The system will shutdown in 5 seconds, click to cancel' && pkill sleep)"
   },
   "custom/logout": {
     "format": "󰗽",
     "tooltip": true,
     "tooltip-format": "logout",
-    "on-click": "loginctl terminate-session $XDG_SESSION_ID",
-  },
+    "justify": "center",
+    "on-click": "loginctl terminate-session $XDG_SESSION_ID"
+  }
 }

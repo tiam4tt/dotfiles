@@ -7,36 +7,34 @@
         Arial,
         sans-serif;
     border: none;
-    min-height: 20px;
     border-radius: 8px;
+    box-shadow: none;
 }
 /* ---------modules group--------- */
 
 /* css margin: top right bottom left; */
 
 .modules-right {
-    margin: 5px 5px 0 5px;
-    padding: 0;
     background-color: @background;
 }
 .modules-center {
-    margin: 5px 0 0 0;
-    padding: 0 0;
     background-color: transparent;
 }
 .modules-left {
-    margin-top: 5px;
-    margin-left: 5px;
-    margin-bottom: 0;
-    margin-right: 0;
-    padding: 0;
     background-color: transparent;
 }
 
+.modules-left,
+.modules-center,
+.modules-right {
+    padding: 0;
+    margin: 3px 5px 0px ;
+    color: @color7;
+}
+
 tooltip {
-    background: @background;
-    color: @color15;
-    padding: 0 10px;
+    background-color: @background;
+    color: @color7;
 }
 
 window#waybar {
@@ -56,12 +54,11 @@ window#waybar.empty #window {
 /* --------workspaces-------- */
 
 #workspaces {
-    background: @background;
+    background-color: @background;
     margin: 0;
     padding: 0;
-    opacity: 1;
-    font-size: 16px;
-    color: @color15;
+    font-size: 14px;
+    color: @color7;
 }
 #workspaces button {
     padding: 0px 5px;
@@ -76,14 +73,16 @@ window#waybar.empty #window {
 
 #workspaces button.active {
     color: @background;
-    background: @color15;
+    background-color: @color7;
     min-width: 40px;
     opacity: 1;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 #workspaces button:hover {
-    color: @color15;
-    background: @color0;
+    color: @color7;
+    background-color: @color0;
     opacity: 1;
     animation: none;
 }
@@ -108,8 +107,23 @@ window#waybar.empty #window {
     padding: 0 5px;
     margin: 0 4px;
     background-color: @background;
-    color: @color15;
-    box-shadow: none;
+    color: @color7;
+    box-shadow: none ;
+}
+
+#tray,
+#memory,
+#wireplumber,
+#backlight,
+#bluetooth,
+#network,
+#battery,
+#custom-power {
+    padding: 0 5px;
+    margin: 0 4px;
+    background-color: transparent;
+    color: @color7;
+    box-shadow: none ;
 }
 /*-----------SPECIFIC STYLING-----------*/
 #wireplumber.muted {
@@ -118,15 +132,6 @@ window#waybar.empty #window {
     color: @background;
 }
 
-#custom-gemini,
-#custom-spotify,
-#custom-messenger {
-    padding: 0 20px 0 15px;
-    margin: 0 3px;
-}
-#custom-messenger {
-    padding-right: 15px;
-}
 
 #custom-power {
     padding-right: 15px;
@@ -138,7 +143,7 @@ window#waybar.empty #window {
 #custom-logout {
     padding: 0 15px;
     margin: 4px 3px;
-    background: @color15;
+    background-color: @color7;
     color: @color0;
     border: none;
 }
@@ -149,15 +154,4 @@ window#waybar.empty #window {
 #mpris.paused,
 #clock {
     padding: 0 15px;
-}
-
-/* --------battery-------- */
-
-#battery.charging,
-#battery.plugged,
-#battery.good,
-#battery.critical,
-#battery.warning {
-    background-color: @background;
-    color: @color15;
 }
