@@ -2,6 +2,7 @@
 
 /* reset all styles */
 * {
+    all: unset;
     font-family:
         JetBrains Mono Nerd Font,
         FiraCode Nerd Font,
@@ -17,13 +18,16 @@
     text-shadow: none;
     background-color: transparent;
     color: @beige;
+    font-weight: normal;
 }
+
 window#waybar {
-  background-color: transparent;
+    background-color: transparent;
 }
+
 /* general */
 
-tooltip,  
+tooltip,
 menu,
 #workspaces,
 #clock,
@@ -35,14 +39,18 @@ menu,
 #network,
 #battery,
 #custom-power {
-    background: @raisin-black;
+    background: @rich-black;
     padding-bottom: 7px;
     padding-top: 7px;
-    margin: 0;
+    margin: 0 3px;
 }
 
 tooltip {
-  border: 1px solid @beige;
+    border: 1px solid @beige;
+}
+
+menu menuitem {
+  padding: 5px;
 }
 
 .modules-right,
@@ -58,6 +66,7 @@ tooltip {
     padding: 0 8px 0 3px;
     border-radius: 22px;
     color: transparent;
+    background: @raisin-black;
     font-weight: bold;
     opacity: 1;
 }
@@ -89,6 +98,34 @@ tooltip {
     padding: 0 15px;
 }
 
+#mpris.playing {
+    color: @rich-black;
+    background: radial-gradient(
+        circle,
+        @vista-blue,
+        @tropical-indigo,
+        @celeste
+    );
+    background-size: 200% 200%;
+    animation: gradient 25s linear infinite;
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 50% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  75% {
+    background-position: 50% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 /* RIGHT MODULES */
 
 #tray {
@@ -99,6 +136,13 @@ tooltip {
     padding: 0 8px;
 }
 
+#wireplumber {
+    color: @celeste;
+}
+
+#backlight {
+  color: @arylide-yellow;
+}
 #bluetooth,
 #network {
     color: @vista-blue;
@@ -113,30 +157,46 @@ tooltip {
     margin: 0 2px;
 }
 #battery {
-    color: @mint;
+  color: @mint;
     min-width: 30px;
     padding-left: 5px;
     padding-right: 3px;
 }
 
-#battery.critical {
-  color: @sunglow;
+#battery.full {
+  color: @beige;
+}
+
+#battery.charging {
+  padding-right: 10px;
+  padding-left: 7px;
+}
+
+
+#battery.good {
+  color: @mint; 
+}
+#battery.fair {
+  color: @tropical-indigo;
 }
 #battery.warning {
-  color: @bittersweet;
+  color: @sunglow;
+}
+#battery.critical {
+  color: @blush;
 }
 
 #custom-power {
     padding: 0 15px 0 9px;
-    color: @periwinkle;
+    color: @cerise;
 }
 
 #custom-suspend,
 #custom-logout,
 #custom-reboot,
 #custom-shutdown {
-    background: @crayola;
     color: @raisin-black;
+    background: @cerise;
     padding: 0 5px;
     min-width: 25px;
     margin: 0 2px;

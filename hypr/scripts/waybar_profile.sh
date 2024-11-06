@@ -1,6 +1,6 @@
 #!/bin/bash
 
-menu=("Topbar" "Bottombar")
+menu=("Topbar" "Topbar 2" "Bottombar")
 choice=$(printf "%s\n" "${menu[@]}" | fuzzel --dmenu -i -p "Waybar Profile: ")
 
 if [ -z "$choice" ]; then
@@ -14,11 +14,17 @@ fi
 
 case $choice in
     Topbar)
-      bar="topbar"
+      config="$HOME/.config/waybar/topbar/config.jsonc"
+      style="$HOME/.config/waybar/topbar/style.css"
       ;;
     Bottombar)
-      bar="bottombar"
+      config="$HOME/.config/waybar/bottombar/config.jsonc"
+      style="$HOME/.config/waybar/bottombar/style.css"
       ;;
+    "Topbar 2")
+        config="$HOME/.config/waybar/topbar/config2.jsonc"
+        style="$HOME/.config/waybar/topbar/style2.css"
+        ;;
 esac
 
-echo "exec = pkill waybar; waybar -c $HOME/.config/waybar/$bar/config.jsonc -s $HOME/.config/waybar/$bar/style.css" > $HOME/.config/hypr/autostart/bar_profile.conf
+echo "exec = pkill waybar; waybar -c $config -s $style" > $HOME/.config/hypr/autostart/bar_profile.conf

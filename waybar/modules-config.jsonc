@@ -15,67 +15,68 @@
     "tooltip-format": "{title}",
     "on-click-middle": "close",
     "on-click": "activate",
-    "ignore-list": ["Alacritty"]
+    "ignore-list": ["Alacritty"],
   },
 
   //////////// hyprland modules ////////////
 
   "hyprland/window": {
     "format": "{initialTitle} - {title}",
-    "max-length": 35,
-    "all-outputs": true
+    "max-length": 40,
+    "all-outputs": true,
   },
   "hyprland/workspaces": {
     "all-outputs": true,
     "warp-on-scroll": true,
     "enable-bar-scroll": true,
-    "disable-scroll-wraparound": true
+    "disable-scroll-wraparound": true,
   },
 
   //////////////// other modules ///////////////
 
   "tray": {
     "icon-size": 18,
-    "spacing": 10
+    "spacing": 10,
   },
 
   "memory": {
     "format": "  {percentage}%",
     "interval": 5,
-    "on-click": "alacritty -e btop"
+    "on-click": "alacritty -e btop",
   },
 
   "mpris": {
-    "format": "<i>{status_icon} {dynamic}</i>",
-    "format-paused": "<i>{status_icon} {dynamic}</i>",
+    "format": "{dynamic}",
+    "format-paused": "<i>{dynamic}</i>",
     "interval": 1,
     "dynamic-len": 40,
     "status-icons": {
       "paused": " ",
       "playing": " ",
-      "stopped": " "
+      "stopped": " ",
     },
     "tooltip-format": "{title} - {artist} | {length}",
     "dynamic-order": ["title", "artist", "album", "position", "length"],
-    "ignored-players": ["firefox", "zen-alpha"],
-
-    "on-click": "playerctl play-pause",
-    "on-scroll-up": "playerctl next",
-    "on-scroll-down": "playerctl previous"
+    // "ignored-players": ["firefox", "zen-alpha"],
+    "align": "1",
+    "justify": "center",
+    "on-click-middle": "playerctl play-pause",
+    "on-click-right": "playerctl next",
+    "on-click": "playerctl previous"
   },
 
   "clock": {
     "format": "{:%I:%M %p • %a %d/%m}",
     "tooltip": true,
-    "tooltip-format": "<tt>{calendar}</tt>"
+    "tooltip-format": "<tt>{calendar}</tt>",
   },
 
   "backlight": {
     "scroll-step": 5,
-    "format": "{icon} {percent}",
+    "format": "{icon}{percent}",
     "format-icons": ["󰃞 ", "󰃟 ", "󰃝 ", "󰃠 "],
     "on-click": "brightnessctl set 10%-",
-    "on-click-right": "brightnessctl set +10%"
+    "on-click-right": "brightnessctl set +10%",
   },
 
   "network": {
@@ -86,33 +87,33 @@
     "interval": 5,
     "tooltip-format-wifi": " {bandwidthDownBytes} |  {bandwidthUpBytes} | {essid}",
     "tooltip-format-disconnected": "Disconnected",
-    "on-click": "nm-connection-editor",
-    "on-click-right": "alacritty -e nmtui"
+    "on-click": "iwmenu --menu fuzzel",
   },
   "battery": {
     "states": {
       "good": 95,
-      "warning": 30,
-      "critical": 15
+      "fair": 65,
+      "warning": 40,
+      "critical": 15,
     },
     "format": "{icon}",
     "format-full": "{icon}",
     "format-charging": "{capacity} ",
     "format-plugged": "{capacity} ",
-    "format-alt": "{icon} {time}",
     "tooltip-format": "{capacity}%, about {time} left",
-    "format-icons": [" ", " ", " ", " "]
+    "format-icons": [" ", " ", " ", " "],
+    "on-click-middle": "tlpui",
   },
 
   "wireplumber": {
     "max-volume": 120,
     "scroll-step": 5, // %, can be a float
-    "format": "{icon} {volume}",
+    "format": "{icon}{volume}",
     "format-bluetooth": "{icon} {volume}",
-    "format-icons": [" ", " ", " "],
+    "format-icons": [" ", " ", "  "],
     "format-muted": " ",
     "on-click-middle": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
-    "on-click": "pavucontrol"
+    "on-click": "pwvucontrol",
   },
 
   "bluetooth": {
@@ -128,7 +129,7 @@
     "tooltip-format-connected": "{device_enumerate}",
     "tooltip-format-enumerate-connected": "{device_alias}\t{device_battery_percentage}%",
 
-    "on-click": "blueman-manager"
+    "on-click": "blueman-manager",
   },
 
   ///////////////// group: power ///////////////
@@ -137,7 +138,7 @@
     "drawer": {
       "click-to-reveal": true,
       "transition-duration": 500,
-      "transition-left-to-right": false
+      "transition-left-to-right": false,
     },
     "modules": [
       "custom/power",
@@ -145,15 +146,15 @@
       "custom/logout",
       "custom/suspend",
       "custom/reboot",
-      "custom/shutdown"
-    ]
+      "custom/shutdown",
+    ],
   },
 
   "custom/power": {
     "format": "",
     "tooltip": true,
     "tooltip-format": "I use Arch, btw.",
-    "justify": "center"
+    "justify": "center",
   },
 
   "custom/suspend": {
@@ -161,7 +162,7 @@
     "tooltip": true,
     "tooltip-format": "sleep",
     "on-click": "systemctl suspend",
-    "justify": "center"
+    "justify": "center",
   },
 
   "custom/reboot": {
@@ -169,7 +170,7 @@
     "tooltip": true,
     "tooltip-format": "reboot",
     "justify": "center",
-    "on-click": "(sleep 5 && reboot) & (notify-send -a System --urgency=critical --expire-time=5000 --wait 'System reboot' 'The system will reboot in 5 seconds, click to cancel' && pkill sleep)"
+    "on-click": "(sleep 5 && reboot) & (notify-send -a System --urgency=critical --expire-time=5000 --wait 'System reboot' 'The system will reboot in 5 seconds, click to cancel' && pkill sleep)",
   },
 
   "custom/shutdown": {
@@ -177,13 +178,13 @@
     "tooltip": true,
     "tooltip-format": "shutdown",
     "justify": "center",
-    "on-click": "(sleep 5 && shutdown now) & (notify-send -a System --urgency=critical --expire-time=5000 --wait 'System Shutdown' 'The system will shutdown in 5 seconds, click to cancel' && pkill sleep)"
+    "on-click": "(sleep 5 && shutdown now) & (notify-send -a System --urgency=critical --expire-time=5000 --wait 'System Shutdown' 'The system will shutdown in 5 seconds, click to cancel' && pkill sleep)",
   },
   "custom/logout": {
     "format": "󰗽",
     "tooltip": true,
     "tooltip-format": "logout",
     "justify": "center",
-    "on-click": "loginctl terminate-session $XDG_SESSION_ID"
-  }
+    "on-click": "loginctl terminate-session $XDG_SESSION_ID",
+  },
 }

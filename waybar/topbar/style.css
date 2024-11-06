@@ -1,13 +1,17 @@
 @import "colors-waybar.css";
 * {
+    all: unset;
     font-family:
         FiraCode Nerd Font,
         FontAwesome,
         Roboto,
         Arial,
         sans-serif;
+    font-size: 13px;
+    padding: 0;
+    margin: 0;
     border: none;
-    border-radius: 8px;
+    border-radius: 6px;
     box-shadow: none;
 }
 /* ---------modules group--------- */
@@ -17,9 +21,7 @@
 .modules-right {
     background-color: @background;
 }
-.modules-center {
-    background-color: transparent;
-}
+.modules-center,
 .modules-left {
     background-color: transparent;
 }
@@ -27,14 +29,24 @@
 .modules-left,
 .modules-center,
 .modules-right {
-    padding: 0;
-    margin: 3px 5px 0px ;
+    margin: 3px 5px 0 ;
+    color: @color7;
+    min-height: 34px;
+}
+
+tooltip,
+menu {
+    background-color: @background;
     color: @color7;
 }
 
-tooltip {
-    background-color: @background;
-    color: @color7;
+tooltip,
+menu menuitem {
+  padding: 5px;
+}
+
+menu menuitem {
+  border-radius: 0;
 }
 
 window#waybar {
@@ -55,15 +67,12 @@ window#waybar.empty #window {
 
 #workspaces {
     background-color: @background;
-    margin: 0;
-    padding: 0;
-    font-size: 14px;
     color: @color7;
 }
+
 #workspaces button {
-    padding: 0px 5px;
+    min-width: 20px;
     margin: 5px;
-    border-radius: 6px;
     border: none;
     color: @foreground;
     background-color: @background;
@@ -74,17 +83,10 @@ window#waybar.empty #window {
 #workspaces button.active {
     color: @background;
     background-color: @color7;
-    min-width: 40px;
+    min-width: 46px;
     opacity: 1;
     margin-top: 5px;
     margin-bottom: 5px;
-}
-
-#workspaces button:hover {
-    color: @color7;
-    background-color: @color0;
-    opacity: 1;
-    animation: none;
 }
 
 /* --------modules-------- */
@@ -154,4 +156,17 @@ window#waybar.empty #window {
 #mpris.paused,
 #clock {
     padding: 0 15px;
+}
+
+#taskbar {
+  margin: 0 5px;
+}
+
+#taskbar button {
+  padding: 0 8px;
+  opacity: 0.4;
+}
+#taskbar button.active {
+  background-color: alpha(@color7, 0.2);
+  opacity: 1;
 }

@@ -4,7 +4,7 @@
     "type": "small",
     "padding": {
       "top": 2,
-      "left": 3,
+      "left": 2,
       "right": 3,
     },
     "color": {
@@ -13,40 +13,54 @@
     },
   },
   "display": {
-    "separator": " ",
+    "separator": "",
+    "color": {
+      "keys": "blue",
+    },
+    "key": {
+      "type": "both",
+      "width": 15,
+      "paddingLeft": 3,
+    },
   },
   "modules": [
     "break",
-    "title",
     {
-      "type": "custom",
-      "format": "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━",
-    },
-    {
-      "type": "os",
-      "key": "󰣇 ",
-    },
-    {
-      "type": "kernel",
-      "key": "󰌽 ",
-    },
-    {
-      "type": "packages",
-      "key": "󰮯 ",
-    },
-    {
-      "type": "uptime",
-      "key": " ",
-    },
-    {
-      "type": "memory",
-      "key": "󰍛 ",
+      "type": "title",
+      "format": "┏━          \u001B[32m{2}\u001b[0m@\u001B[35m{1}\u001B[0m          ━┓",
     },
     "break",
     {
+      "type": "os",
+      "key": "Distro ",
+      "keyIcon": "󰣇",
+    },
+    {
+      "type": "kernel",
+      "keyIcon": "󰌽",
+    },
+    {
+      "type": "packages",
+      "keyIcon": "󰮯",
+    },
+    {
+      "type": "uptime",
+      "keyIcon": "",
+    },
+    {
+      "type": "memory",
+      "keyIcon": "󰍛",
+    },
+    "break",
+    {
+      "type": "custom",
+      "format": "┗━                                       ━┛",
+    },
+    {
       "type": "colors",
       "symbol": "diamond",
+      "paddingLeft": 13,
     },
-    "break"
+    "break",
   ],
 }

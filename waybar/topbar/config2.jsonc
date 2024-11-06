@@ -1,0 +1,37 @@
+[
+  {
+    "output": ["*"],
+    "include": ["~/.config/waybar/modules-config.jsonc"],
+    "position": "top",
+    "margin": "3 5 0 5",
+
+    "modules-left": ["group/power", "hyprland/workspaces", "wlr/taskbar"],
+    "modules-center": ["mpris"],
+    "modules-right": [
+      "tray",
+      "wireplumber",
+      "backlight",
+      "network",
+      "bluetooth",
+      "battery",
+      "clock",
+    ],
+    "hyprland/workspaces": {
+      "format": "{icon}",
+      "on-click": "activate",
+      "on-scroll-up": "hyprctl dispatch workspace e-1",
+      "on-scroll-down": "hyprctl dispatch workspace e+1",
+    },
+    "network": {
+      "format-wifi": "{icon} {essid}",
+    },
+    "group/power": {
+      "drawer": {
+        "transition-left-to-right": true,
+      },
+    },
+    "clock": {
+      "format": "{:%I:%M %p}",
+    },
+  },
+]

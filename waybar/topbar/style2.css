@@ -1,0 +1,162 @@
+@define-color bg #101419;
+@define-color fg #A4BFEB;
+@define-color aquamarine #A5F8D3;
+@define-color powderblue #A0B9C6;
+@define-color coolgray #9A98B5;
+@define-color purpureus #995FA3;
+@define-color mauve #cba6f7;
+@define-color red #f38ba8;
+@define-color peach #fab387;
+@define-color blue #89b4fa;
+@define-color sapphire #74c7ec;
+
+* {
+    all: unset;
+    font-family:
+        MesloLGM Nerd Font,
+        BlexMono Nerd Font,
+        FiraCode Nerd Font,
+        JetBrains Mono Nerd Font,
+        Roboto,
+        sans-serif;
+    font-size: 12px;
+    border-radius: 0;
+    border: none;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+    text-shadow: none;
+    background-color: transparent;
+    background: transparent;
+    color: @fg;
+    font-weight: normal;
+}
+
+window#waybar,
+tooltip,
+menu {
+    background-color: @bg;
+    border-radius: 6px;
+}
+
+.modules-left,
+.modules-center,
+.modules-right {
+    min-height: 30px;
+    margin: 0 5px;
+}
+
+tooltip label {
+    padding: 5px;
+}
+
+menu menuitem {
+    margin: 5px;
+}
+
+#workspaces {
+    margin: 0 10px 0 5px;
+}
+
+#workspaces button {
+    min-width: 20px;
+    padding: 0 3px;
+    transition: border 0.3s ease-out;
+}
+#workspaces button.active,
+#workspaces button:hover {
+    border-bottom: 2px solid @fg;
+    padding-bottom: 2px;
+    background-color: alpha(@fg, 0.1);
+}
+
+#taskbar button {
+    padding: 0 5px;
+    opacity: 0.6;
+}
+#taskbar button.active {
+    opacity: 1;
+    border-bottom: 2px solid @fg;
+}
+
+#mpris {
+    margin: 4px 8px;
+    padding: 0 10px;
+    border-radius: 6px;
+    transition: background 0.5s ease;
+}
+
+#mpris.playing {
+    /*background-color: alpha(@fg, 0.1);*/
+    color: @bg;
+    /* background: linear-gradient(
+        270deg,
+        @aquamarine,
+        @powderblue,
+        @coolgray,
+        @purpureus
+    ); */
+    background: radial-gradient(circle, @peach, @red, @mauve, @purpureus);
+    background-size: 200% 200%;
+    animation: gradient-flow 15s ease infinite;
+}
+
+@keyframes gradient-flow {
+    0% {
+        background-position: 0% 50%;
+    }
+    25% {
+        background-position: 50% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    75% {
+        background-position: 50% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes blink {
+    to {
+        color: @bg;
+    }
+}
+
+#tray,
+#wireplumber,
+#backlight,
+#bluetooth,
+#network,
+#battery,
+#custom-power,
+#custom-suspend,
+#custom-logout,
+#custom-reboot,
+#custom-shutdown {
+    min-width: 25px;
+    padding: 0 3px;
+    margin: 0 3px;
+}
+
+#custom-power:hover,
+#wireplumber:hover,
+#backlight:hover,
+#network:hover,
+#bluetooth:hover,
+#battery:hover {
+  border-bottom: 2px solid @fg;
+}
+
+#clock {
+    margin: 0 10px 0 0;
+    padding-left: 8px;
+}
+
+#battery.critical:not(charging) {
+    animation-name: blink;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
