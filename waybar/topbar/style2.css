@@ -1,5 +1,5 @@
-@define-color bg #101419;
-@define-color fg #A4BFEB;
+@define-color background #101419;
+@define-color color7 #A4BFEB;
 @define-color aquamarine #A5F8D3;
 @define-color powderblue #A0B9C6;
 @define-color coolgray #9A98B5;
@@ -9,6 +9,8 @@
 @define-color peach #fab387;
 @define-color blue #89b4fa;
 @define-color sapphire #74c7ec;
+
+@import "colors-waybar.css";
 
 * {
     all: unset;
@@ -28,14 +30,14 @@
     text-shadow: none;
     background-color: transparent;
     background: transparent;
-    color: @fg;
+    color: @color7;
     font-weight: normal;
 }
 
 window#waybar,
 tooltip,
 menu {
-    background-color: @bg;
+    background-color: @background;
     border-radius: 6px;
 }
 
@@ -65,9 +67,9 @@ menu menuitem {
 }
 #workspaces button.active,
 #workspaces button:hover {
-    border-bottom: 2px solid @fg;
+    border-bottom: 2px solid @color7;
     padding-bottom: 2px;
-    background-color: alpha(@fg, 0.1);
+    background-color: alpha(@color7, 0.1);
 }
 
 #taskbar button {
@@ -76,7 +78,7 @@ menu menuitem {
 }
 #taskbar button.active {
     opacity: 1;
-    border-bottom: 2px solid @fg;
+    border-bottom: 2px solid @color7;
 }
 
 #mpris {
@@ -87,8 +89,8 @@ menu menuitem {
 }
 
 #mpris.playing {
-    /*background-color: alpha(@fg, 0.1);*/
-    color: @bg;
+    /*background-color: alpha(@color7, 0.1);*/
+    color: @background;
     /* background: linear-gradient(
         270deg,
         @aquamarine,
@@ -121,16 +123,14 @@ menu menuitem {
 
 @keyframes blink {
     to {
-        color: @bg;
+        color: @background;
     }
 }
 
 #tray,
 #wireplumber,
 #backlight,
-#bluetooth,
 #network,
-#battery,
 #custom-power,
 #custom-suspend,
 #custom-logout,
@@ -141,13 +141,19 @@ menu menuitem {
     margin: 0 3px;
 }
 
+#bluetooth,
+#battery {
+  min-width: 15px;
+  margin: 0 3px;
+}
+
 #custom-power:hover,
 #wireplumber:hover,
 #backlight:hover,
 #network:hover,
 #bluetooth:hover,
 #battery:hover {
-  border-bottom: 2px solid @fg;
+  border-bottom: 2px solid @color7;
 }
 
 #clock {

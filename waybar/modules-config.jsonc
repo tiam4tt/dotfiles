@@ -100,9 +100,10 @@
     "format-full": "{icon}",
     "format-charging": "{capacity} ",
     "format-plugged": "{capacity} ",
+    "format-alt": "{icon} {time}",
     "tooltip-format": "{capacity}%, about {time} left",
     "format-icons": [" ", " ", " ", " "],
-    "on-click-middle": "tlpui",
+    "on-click": "tlpui",
   },
 
   "wireplumber": {

@@ -31,7 +31,7 @@
 .modules-right {
     margin: 3px 5px 0 ;
     color: @color7;
-    min-height: 34px;
+    min-height: 30px;
 }
 
 tooltip,

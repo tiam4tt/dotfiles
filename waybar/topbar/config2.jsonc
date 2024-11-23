@@ -30,8 +30,5 @@
         "transition-left-to-right": true,
       },
     },
-    "clock": {
-      "format": "{:%I:%M %p}",
-    },
   },
 ]
