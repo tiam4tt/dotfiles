@@ -27,16 +27,16 @@
 |**OS**| Arch Linux|
 |**WM** | Hyprland|
 |**Editor**| Neovim|
-|**Browser**| Zen Browser|
+|**Browser**| Firefox|
 |**File Manager**| Thunar|
 |**Fetch**| fastfetch|
 |**Launcher**| Fuzzel|
 |**Terminal**| Alacritty|
 |**Shell**| Fish|
-|**Notification**| Dunst|
+|**Notification**| fnott|
 |**Lockscreen**| hyprlock|
 |**Color scheme generator**| pywal|
-|**Fonts**| JetBrains Mono Nerd Font, FiraCode Nerd Font|
+|**Fonts**| JetBrains Mono Nerd Font, FiraCode Nerd Font, Blex Mono Nerd Font|
 |**Music Player**| Tauon Music Box|
 
 ## Grant execute permission to scripts in `~/.config/hypr/scripts/`
@@ -83,6 +83,9 @@ Wallpaper directory by default points to `~/Pictures/wallpapers/`
 
 **ENV**: `~/.config/hypr/env/env.conf`
 
-**Input devices & touchpad scripts**: `~/.config/hypr/input/input.conf`, `~/.config/hypr/scripts/touchpad-status.sh`, `~/.config/hypr/scripts/touchpad-toggle.sh`
+**Input devices & touchpad scripts**:
+- `~/.config/hypr/input/input.conf`
+- `~/.config/hypr/scripts/touchpad-status.sh`
+- `~/.config/hypr/scripts/touchpad-toggle.sh`
 
 **Hyprlock wallpaper**: `~/.config/hypr/hyprlock.conf`

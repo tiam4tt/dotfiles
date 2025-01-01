@@ -37,8 +37,8 @@
 window#waybar,
 tooltip,
 menu {
-    background-color: @background;
-    border-radius: 6px;
+    background-color: alpha(@background, 0.87);
+    border-radius: 8px;
 }
 
 .modules-left,
