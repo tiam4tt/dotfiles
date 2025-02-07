@@ -12,7 +12,12 @@ content="preload = $wallpaper_dir/$choice\nwallpaper = ,$wallpaper_dir/$choice"
 
 echo -e $content > $HOME/.config/hypr/hyprpaper.conf
 
-wal -s -t -i "$wallpaper_dir/$choice"
+theme=$1
+if [ "$theme" == "Dark" ]; then
+    wal -s -t -i "$wallpaper_dir/$choice"
+else
+    wal -s -t -i "$wallpaper_dir/$choice" -l
+fi
 
 cp -rf $HOME/.cache/wal/colors-waybar.css $HOME/.config/waybar/topbar
 

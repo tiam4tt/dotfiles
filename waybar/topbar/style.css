@@ -1,4 +1,6 @@
+@import "../custom-color.css";
 @import "colors-waybar.css";
+
 * {
     all: unset;
     font-family:
@@ -19,7 +21,7 @@
 /* css margin: top right bottom left; */
 
 .modules-right {
-    background-color: @background;
+    background-color: @bg;
 }
 .modules-center,
 .modules-left {
@@ -29,24 +31,25 @@
 .modules-left,
 .modules-center,
 .modules-right {
-    margin: 3px 5px 0 ;
+    margin: 3px 5px 0;
     color: @color7;
-    min-height: 30px;
+    min-height: 28px;
 }
 
 tooltip,
 menu {
-    background-color: @background;
+    background-color: @bg;
     color: @color7;
 }
 
 tooltip,
 menu menuitem {
-  padding: 5px;
+    padding: 5px;
 }
 
 menu menuitem {
-  border-radius: 0;
+    border-radius: 0;
+    margin: 3px;
 }
 
 window#waybar {
@@ -66,38 +69,49 @@ window#waybar.empty #window {
 /* --------workspaces-------- */
 
 #workspaces {
-    background-color: @background;
+    background-color: @bg;
     color: @color7;
+    padding: 4px 0;
 }
 
 #workspaces button {
     min-width: 20px;
-    margin: 5px;
     border: none;
+    margin: 0 4px;
     color: @foreground;
-    background-color: @background;
+    background-color: @bg;
     transition: all 0.3s ease-in-out;
     opacity: 0.4;
 }
 
 #workspaces button.active {
-    color: @background;
+    color: @bg;
     background-color: @color7;
-    min-width: 46px;
+    min-width: 45px;
     opacity: 1;
-    margin-top: 5px;
-    margin-bottom: 5px;
 }
 
 /* --------modules-------- */
 /*--------GENERAL STYLING-------*/
+
+#custom-power,
+#battery,
+#network,
+#bluetooth,
+#backlight,
+#wireplumber {
+    color: @color5;
+}
+
+#clock,
+#mpris {
+    color: @color6;
+}
+
 #window,
 #mpris,
 #mpris.paused,
 #clock,
-#custom-gemini,
-#custom-spotify,
-#custom-messenger,
 #tray,
 #memory,
 #wireplumber,
@@ -106,11 +120,10 @@ window#waybar.empty #window {
 #network,
 #battery,
 #custom-power {
-    padding: 0 5px;
-    margin: 0 4px;
-    background-color: @background;
-    color: @color7;
-    box-shadow: none ;
+    margin: 0 6px;
+    background-color: @bg;
+    box-shadow: none;
+    min-width: 20px;
 }
 
 #tray,
@@ -121,22 +134,24 @@ window#waybar.empty #window {
 #network,
 #battery,
 #custom-power {
-    padding: 0 5px;
-    margin: 0 4px;
     background-color: transparent;
-    color: @color7;
-    box-shadow: none ;
 }
 /*-----------SPECIFIC STYLING-----------*/
-#wireplumber.muted {
-    margin: 4px 3px;
-    background-color: @color2;
-    color: @background;
+#wireplumber,
+#wireplumber.muted,
+#backlight {
+    min-width: 40px;
 }
 
+#wireplumber.muted {
+    margin-top: 4px;
+    margin-bottom: 4px;
+    background-color: @foreground;
+    color: @bg;
+}
 
 #custom-power {
-    padding-right: 15px;
+    padding-right: 8px;
 }
 
 #custom-suspend,
@@ -146,10 +161,9 @@ window#waybar.empty #window {
     padding: 0 15px;
     margin: 4px 3px;
     background-color: @color7;
-    color: @color0;
+    color: @bg;
     border: none;
 }
-
 
 #window,
 #mpris,
@@ -159,14 +173,37 @@ window#waybar.empty #window {
 }
 
 #taskbar {
-  margin: 0 5px;
+    margin: 0 5px;
 }
 
 #taskbar button {
-  padding: 0 8px;
-  opacity: 0.4;
+    padding: 0 8px;
 }
 #taskbar button.active {
-  background-color: alpha(@color7, 0.2);
-  opacity: 1;
+    background-color: alpha(@color7, 0.3);
+}
+
+#mpris.playing {
+    color: @bg;
+    background: radial-gradient(circle, @peach, @red, @mauve, @purpureus);
+    background-size: 200% 200%;
+    animation: gradient-flow 15s ease infinite;
+}
+
+@keyframes gradient-flow {
+    0% {
+        background-position: 0% 50%;
+    }
+    25% {
+        background-position: 50% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    75% {
+        background-position: 50% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }

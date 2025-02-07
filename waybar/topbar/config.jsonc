@@ -19,8 +19,11 @@
       "group/power",
     ],
     "battery": {
-      "format": "{icon}"
-    }
+      "format": "{icon}",
+    },
+    "network": {
+      "format-wifi": "{icon} {essid}",
+    },
   },
   {
     "output": ["HDMI-A-1", "DP-1"],

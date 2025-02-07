@@ -3,7 +3,7 @@
     "output": ["*"],
     "include": ["~/.config/waybar/modules-config.jsonc"],
     "position": "top",
-    "margin": "3 5 0 5",
+    "margin": "0 0 0 0",
 
     "modules-left": ["group/power", "hyprland/workspaces", "wlr/taskbar"],
     "modules-center": ["mpris"],

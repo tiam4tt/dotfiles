@@ -21,12 +21,14 @@ case $choice in
         loginctl terminate-session $XDG_SESSION_ID
         ;;
     "AC/BAT Refresh Rate")
-      hyprctl dispatch exec "$HOME/.config/hypr/scripts/refreshrate_switch.sh"
+        hyprctl dispatch exec "$HOME/.config/hypr/scripts/refreshrate_switch.sh"
         ;;
     "Change wallpaper")
-      hyprctl dispatch exec "$HOME/.config/hypr/scripts/wallpaper_switch.sh"
+        dark_light=("Dark" "Light")
+        theme=$(printf "%s\n" "${dark_light[@]}" | fuzzel --dmenu -i -p "Theme: ")
+        hyprctl dispatch exec "$HOME/.config/hypr/scripts/wallpaper_switch.sh" $theme
         ;;
     "Waybar Profile")
-      hyprctl dispatch exec "$HOME/.config/hypr/scripts/waybar_profile.sh"
+        hyprctl dispatch exec "$HOME/.config/hypr/scripts/waybar_profile.sh"
         ;;
 esac

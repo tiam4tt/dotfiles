@@ -1,15 +1,4 @@
-@define-color background #101419;
-@define-color color7 #A4BFEB;
-@define-color aquamarine #A5F8D3;
-@define-color powderblue #A0B9C6;
-@define-color coolgray #9A98B5;
-@define-color purpureus #995FA3;
-@define-color mauve #cba6f7;
-@define-color red #f38ba8;
-@define-color peach #fab387;
-@define-color blue #89b4fa;
-@define-color sapphire #74c7ec;
-
+@import "../custom-color.css";
 @import "colors-waybar.css";
 
 * {
@@ -37,8 +26,9 @@
 window#waybar,
 tooltip,
 menu {
-    background-color: alpha(@background, 0.87);
-    border-radius: 8px;
+    background-color: alpha(@background, 0.9);
+    /* background-color: transparent; */
+    border-radius: 0;
 }
 
 .modules-left,
@@ -143,8 +133,8 @@ menu menuitem {
 
 #bluetooth,
 #battery {
-  min-width: 15px;
-  margin: 0 3px;
+    min-width: 15px;
+    margin: 0 3px;
 }
 
 #custom-power:hover,
@@ -153,7 +143,7 @@ menu menuitem {
 #network:hover,
 #bluetooth:hover,
 #battery:hover {
-  border-bottom: 2px solid @color7;
+    border-bottom: 2px solid @color7;
 }
 
 #clock {
