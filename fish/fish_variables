@@ -1,6 +1,7 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
 SETUVAR THEME_EDEN_PROMPT_CHAR:\u00bb
+SETUVAR --export VISUAL:nvim
 SETUVAR --export XDG_SESSION_TYPE:wayland
 SETUVAR __fish_initialized:3400
 SETUVAR _fisher_plugins:rose\x2dpine/fish

@@ -62,13 +62,14 @@
     "justify": "center",
     "on-click-middle": "playerctl play-pause",
     "on-click-right": "playerctl next",
-    "on-click": "playerctl previous"
+    "on-click": "playerctl previous",
   },
 
   "clock": {
     "format": "{:%I:%M %p • %a %d/%m}",
     "tooltip": true,
     "tooltip-format": "<tt>{calendar}</tt>",
+    "on-click": "alacritty -e calcurse"
   },
 
   "backlight": {
