@@ -3,9 +3,9 @@
 * {
     all: unset;
     font-family:
-        BlexMono Nerd Font,
-        MesloLGM Nerd Font,
-        FiraCode Nerd Font,
+    FiraCode Nerd Font,
+    BlexMono Nerd Font,
+    MesloLGM Nerd Font,
         JetBrains Mono Nerd Font,
         Roboto,
         sans-serif;
@@ -104,7 +104,7 @@ menuitem {
 
 
 #clock {
-    color: @mauve;
+    color: @magenta;
 }
 #bluetooth {
     color: @blue;
@@ -113,9 +113,11 @@ menuitem {
     color: @yellow;
 }
 
-#wireplumber,
+#wireplumber {
+    color: @cyan;
+}
 #backlight {
-    color: @white;
+  color: @green;
 }
 #custom-power,
 #custom-suspend,
@@ -124,6 +126,7 @@ menuitem {
 #custom-shutdown {
     color: @red;
     padding-left: 8px;
+    margin: 0 3px;  
 }
 
 

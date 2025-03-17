@@ -1,10 +1,15 @@
-@define-color bg #0F0E0E;
-@define-color red #FF8E8E;
-@define-color green #38A3A5;
-@define-color yellow #FCAD3F;
-/* @define-color blue #89b4fa; */
-@define-color blue #89BBFE;
-@define-color magenta #FDBBFE;
-@define-color cyan #8CE8FF;
-@define-color white #E8EBF7;
-@define-color mauve #C2AFF0;
+@define-color bg          #0F0E0E;
+@define-color darkolive   #202216;
+@define-color red         #FF8E8E;
+@define-color fierycoral  #F77051;
+@define-color green       #38A3A5;
+@define-color yellow      #FCAD3F;
+@define-color blue        #89b4fa;
+@define-color coolteal    #5C899D;
+@define-color magenta     #FDBBFE;
+@define-color cyan        #8CE8FF;
+@define-color white       #E8EBF7;
+@define-color ivorywhite  #FFFCEF;
+@define-color mutedlilac  #D6CFE1;
+@define-color mauve       #C2AFF0;
+@define-color palegold    #F2DE9B;
