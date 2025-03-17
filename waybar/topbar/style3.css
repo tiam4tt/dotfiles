@@ -1,0 +1,174 @@
+@import "../astrology-vibrant-stellar.css";
+
+* {
+    all: unset;
+    font-family:
+        BlexMono Nerd Font,
+        MesloLGM Nerd Font,
+        FiraCode Nerd Font,
+        JetBrains Mono Nerd Font,
+        Roboto,
+        sans-serif;
+    font-size: 13px;
+    border-radius: 0;
+    border: none;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+    text-shadow: none;
+    background: transparent;
+    background: transparent;
+    color: @blue;
+    font-weight: normal;
+}
+
+.modules-right,
+.modules-center,
+.modules-left {
+    /* background: @bg; */
+    margin: 3px 5px;
+}
+
+window#waybar.empty #window {
+  background: transparent;
+}
+
+tooltip,
+menu,
+menuitem {
+    background: @bg;
+    border-radius: 6px;
+    padding: 5px;
+}
+
+#workspaces {
+    background: @bg;
+    border-radius: 8px;
+    padding: 4px 8px 4px 5px;
+    opacity: 1;
+}
+#workspaces button {
+    opacity: 0.3;
+    min-width: 25px;
+    transition: all 0.25s ease-out;
+    border-radius: 5px;
+}
+#workspaces button label {
+    color: @white;
+}
+
+#workspaces button.visible,
+#workspaces button.active {
+    opacity: 1;
+}
+#workspaces button.active label {
+    color: @magenta;
+}
+
+
+#mpris,
+#battery,
+#tray,
+#clock,
+#network,
+#wireplumber,
+#bluetooth,
+#custom-power,
+#custom-suspend,
+#custom-logout,
+#custom-reboot,
+#custom-shutdown,
+#backlight {
+    padding: 0 10px;
+    border-radius: 8px;
+    background: @bg;
+    color: @blue;
+    min-width: 20px;
+    color: @bg;
+}
+
+#battery {
+    color: @cyan;
+    padding-right: 6px;
+}
+#battery.good {
+    color: @blue;
+}
+#battery.fair {
+    color: @yellow;
+}
+#battery.warning,
+#battery.critical{
+    color: @red;
+}
+
+
+#clock {
+    color: @mauve;
+}
+#bluetooth {
+    color: @blue;
+}
+#network {
+    color: @yellow;
+}
+
+#wireplumber,
+#backlight {
+    color: @white;
+}
+#custom-power,
+#custom-suspend,
+#custom-logout,
+#custom-reboot,
+#custom-shutdown {
+    color: @red;
+    padding-left: 8px;
+}
+
+
+#window {
+    background: @bg;
+    border-radius: 8px;
+    padding: 0 15px;
+}
+
+#mpris {
+    color: @yellow;
+    background: @bg;
+}
+
+#mpris.playing {
+    color: @bg;
+    animation: gradient-shift 10s infinite;
+}
+
+@keyframes gradient-shift {
+    0% {
+        background: @red;
+    }
+    25% {
+        background: @yellow;
+    }
+    50% {
+        background: @magenta;
+    }
+    75% {
+        background: @blue;
+    }
+    100% {
+        background: @red;
+    }
+}
+
+
+#battery.critical:not(charging) {
+    animation-name: blink;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+@keyframes blink {
+    to {
+        color: @bg;
+    }
+}

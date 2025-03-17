@@ -21,11 +21,15 @@
   //////////// hyprland modules ////////////
 
   "hyprland/window": {
-    "format": "{initialTitle} - {title}",
+    "format": "{initialTitle}",
     "max-length": 40,
     "all-outputs": true,
   },
   "hyprland/workspaces": {
+    "format": "{icon}",
+    "on-click": "activate",
+    "on-scroll-up": "hyprctl dispatch workspace e-1",
+    "on-scroll-down": "hyprctl dispatch workspace e+1",
     "all-outputs": true,
     "warp-on-scroll": true,
     "enable-bar-scroll": true,
@@ -97,7 +101,7 @@
       "warning": 40,
       "critical": 15,
     },
-    "format": "{icon}",
+    "format": "{icon} {capacity}",
     "format-full": "{icon}",
     "format-charging": "{capacity} ",
     "format-plugged": "{capacity} ",
@@ -133,7 +137,14 @@
 
     "on-click": "blueman-manager",
   },
-
+  ///////////////// custom: chatGPT ////////////
+  "custom/chatGPT": {
+    "format": "󱙺",
+    "tooltip": true,
+    "tooltip-format": "Open chatGPT",
+    "justify": "center",
+    "on-click": "chromium --app=https://chat.openai.com"
+  },
   ///////////////// group: power ///////////////
   "group/power": {
     "orientation": "inherit",

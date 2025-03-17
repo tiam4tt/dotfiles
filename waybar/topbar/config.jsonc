@@ -1,6 +1,6 @@
 [
   {
-    "output": ["eDP-1"],
+    "output": ["*"],
     "include": ["~/.config/waybar/modules-config.jsonc"],
     "position": "top",
     "margin-top": 0,
@@ -24,22 +24,5 @@
     "network": {
       "format-wifi": "{icon} {essid}",
     },
-  },
-  {
-    "output": ["HDMI-A-1", "DP-1"],
-    "include": ["~/.config/waybar/modules-config.jsonc"],
-    "modules-left": ["hyprland/workspaces"],
-    "modules-center": ["hyprland/window"],
-    "modules-right": ["clock"],
-
-    "hyprland/workspaces": {
-      "all-outputs": true,
-      "warp-on-scroll": true,
-      "enable-bar-scroll": true,
-      "disable-scroll-wraparound": false,
-      "on-click": "activate",
-      "on-scroll-up": "hyprctl dispatch workspace e-1",
-      "on-scroll-down": "hyprctl dispatch workspace e+1",
-    },
-  },
+  }
 ]

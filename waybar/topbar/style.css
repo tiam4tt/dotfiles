@@ -4,6 +4,8 @@
 * {
     all: unset;
     font-family:
+        MesloLGM Nerd Font,
+        BlexMono Nerd Font,
         FiraCode Nerd Font,
         FontAwesome,
         Roboto,
@@ -80,12 +82,13 @@ window#waybar.empty #window {
     margin: 0 4px;
     color: @foreground;
     background-color: @bg;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.25s ease-out;
     opacity: 0.4;
 }
 
 #workspaces button.active {
     color: @bg;
+    border-radius: 4px;
     background-color: @color7;
     min-width: 45px;
     opacity: 1;

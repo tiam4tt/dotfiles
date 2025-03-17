@@ -26,9 +26,13 @@
 window#waybar,
 tooltip,
 menu {
-    background-color: alpha(@background, 0.76);
+    background-color: alpha(@background, 0.9);
     /* background-color: transparent; */
-    border-radius: 0;
+}
+
+tooltip,
+menu {
+    border-radius: 6px;
 }
 
 .modules-left,

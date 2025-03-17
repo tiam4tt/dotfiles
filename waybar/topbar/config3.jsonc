@@ -1,0 +1,47 @@
+[
+    {
+      "output": ["*"],
+      "include": ["~/.config/waybar/modules-config.jsonc"],
+      "position": "top",
+      "margin": "0 0 0 0",
+  
+      "modules-left": ["hyprland/workspaces", "hyprland/window"],
+      "modules-center": ["mpris"],
+      "modules-right": [
+        "tray",
+        "wireplumber",
+        "backlight",
+        "bluetooth",
+        "network",
+        "clock",
+        "battery",
+        "group/power"
+      ],
+      "hyprland/window": {
+            "format": "{title}",
+            "icon": true,
+            "icon-size": 18,
+            "max-length": 128,
+      },
+      "hyprland/workspaces": {
+        "format": "{icon}",
+        "format-icons": {
+          "active": "",
+          "urgent": "",
+          "default": ""
+        }
+      },
+      "network": {
+        "format-wifi": "{icon} {essid}",
+      },
+      "group/power": {
+        "drawer": {
+          "transition-left-to-right": false,
+        },
+      },
+      "mpris": {
+        "ignored-players": ["firefox"]
+      }
+    }
+  ]
+  

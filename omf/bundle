@@ -1,6 +1,8 @@
+package vcs
 theme agnoster
 theme aight
 theme bobthefish
+theme chain
 theme clearance
 theme cmorrell
 theme coffeeandcode
@@ -8,6 +10,7 @@ theme cor
 theme default
 theme jacaetevha
 theme kovial
+theme l
 theme nelsonjchen
 theme numist
 theme ocean

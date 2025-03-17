@@ -17,7 +17,7 @@
     box-shadow: none;
     text-shadow: none;
     background-color: transparent;
-    color: @beige;
+    color: @antiflash;
     font-weight: normal;
 }
 
@@ -39,18 +39,14 @@ menu,
 #network,
 #battery,
 #custom-power {
-    background: @rich-black;
+    background: black;
     padding-bottom: 7px;
     padding-top: 7px;
     margin: 0 3px;
 }
 
-tooltip {
-    border: 1px solid @beige;
-}
-
 menu menuitem {
-  padding: 5px;
+    padding: 8px;
 }
 
 .modules-right,
@@ -66,7 +62,7 @@ menu menuitem {
     padding: 0 8px 0 3px;
     border-radius: 22px;
     color: transparent;
-    background: @rich-black;
+    background: black;
     font-weight: bold;
     opacity: 1;
 }
@@ -88,7 +84,7 @@ menu menuitem {
     transition: all 0.3s ease-in-out;
 }
 #taskbar button.active {
-    background: alpha(@onyx, 0.8);
+    background: alpha(@onyx, 0.6);
 }
 
 /* CENTER MODULES */
@@ -99,7 +95,7 @@ menu menuitem {
 }
 
 #mpris.playing {
-    color: @rich-black;
+    color: black;
     background: radial-gradient(
         circle,
         @vista-blue,
@@ -110,23 +106,33 @@ menu menuitem {
     animation: gradient 25s linear infinite;
 }
 @keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  25% {
-    background-position: 50% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  75% {
-    background-position: 50% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+    0% {
+        background-position: 0% 50%;
+    }
+    25% {
+        background-position: 50% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    75% {
+        background-position: 50% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 /* RIGHT MODULES */
+
+/* #tray,
+#wireplumber,
+#backlight,
+#bluetooth,
+#network,
+#battery,
+#custom-power {
+    border-radius: 22px;
+} */
 
 #tray {
     padding: 0 8px;
@@ -141,7 +147,7 @@ menu menuitem {
 }
 
 #backlight {
-  color: @arylide-yellow;
+    color: @arylide-yellow;
 }
 #bluetooth,
 #network {
@@ -157,33 +163,32 @@ menu menuitem {
     margin: 0 2px;
 }
 #battery {
-  color: @mint;
+    color: @mint;
     min-width: 30px;
     padding-left: 5px;
     padding-right: 3px;
 }
 
 #battery.full {
-  color: @beige;
+    color: @antiflash;
 }
 
 #battery.charging {
-  padding-right: 10px;
-  padding-left: 7px;
+    padding-right: 10px;
+    padding-left: 7px;
 }
-
 
 #battery.good {
-  color: @mint; 
+    color: @mint;
 }
 #battery.fair {
-  color: @tropical-indigo;
+    color: @tropical-indigo;
 }
 #battery.warning {
-  color: @sunglow;
+    color: @sunglow;
 }
 #battery.critical {
-  color: @blush;
+    color: @blush;
 }
 
 #custom-power {
@@ -195,7 +200,7 @@ menu menuitem {
 #custom-logout,
 #custom-reboot,
 #custom-shutdown {
-    color: @raisin-black;
+    color: black;
     background: @cerise;
     padding: 0 5px;
     min-width: 25px;
