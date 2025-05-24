@@ -1,0 +1,223 @@
+@import "../catppucin-mocha.css";
+
+* {
+    all: unset;
+    font-family:
+        FiraCode Nerd Font,
+        MesloLGM Nerd Font,
+        BlexMono Nerd Font,
+        JetBrains Mono Nerd Font,
+        Roboto,
+        sans-serif;
+    font-size: 14px;
+    border-radius: 0;
+    border: none;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+    text-shadow: none;
+    background: transparent;
+    background: transparent;
+    color: @text;
+    font-weight: normal;
+}
+
+.modules-right,
+.modules-center,
+.modules-left {
+    margin: 4px 5px;
+    padding: 3px 0px;
+}
+
+window#waybar {
+    background: @crust;
+}
+
+window#waybar.empty #window {
+    background: transparent;
+}
+
+tooltip,
+menu,
+menuitem {
+    background: @crust;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+#custom-mpris_prev,
+#custom-mpris_plp,
+#custom-mpris_next {
+    min-width: 20px;
+    background: @base;
+}
+#custom-mpris_plp {
+    padding: 0 10px;
+}
+#custom-mpris_prev {
+    border-radius: 10px 0 0 10px;
+    padding-left: 8px;
+}
+#custom-mpris_next {
+    border-radius: 0 10px 10px 0;
+    padding-right: 10px;
+}
+
+#custom-mpris_prev:hover,
+#custom-mpris_plp:hover,
+#custom-mpris_next:hover {
+    color: @peach;
+}
+
+#workspaces {
+    background: @base;
+    border-radius: 10px;
+    padding: 3px 8px 4px 5px;
+    /* padding: 4px 5px; */
+    margin-right: 5px;
+    margin-left: 5px;
+    opacity: 1;
+}
+#workspaces button {
+    opacity: 0.3;
+    min-width: 25px;
+    transition: all 0.25s ease-out;
+    border-radius: 10px;
+}
+#workspaces button label {
+    color: @overlay2;
+}
+
+#workspaces button.visible,
+#workspaces button.active {
+    opacity: 1;
+}
+#workspaces button.active label {
+    color: @yellow;
+}
+
+#mpris,
+#battery,
+#tray,
+#clock,
+#network,
+#wireplumber,
+#bluetooth,
+#custom-power,
+#custom-suspend,
+#custom-logout,
+#custom-reboot,
+#custom-shutdown,
+#backlight {
+    padding: 0 10px;
+    margin-left: 3px;
+    margin-right: 3px;
+    border-radius: 10px;
+    background: @base;
+    color: @blue;
+    min-width: 20px;
+    color: @crust;
+}
+
+#battery {
+    color: @green;
+    padding-right: 6px;
+}
+#battery.good {
+    color: @blue;
+}
+#battery.fair {
+    color: @yellow;
+}
+#battery.warning,
+#battery.critical {
+    color: @red;
+}
+
+#clock {
+    color: @peach;
+}
+
+#bluetooth,
+#network {
+    color: @blue;
+}
+
+#bluetooth {
+    margin-right: 0;
+    padding-right: 5px;
+    border-radius: 10px 0 0 10px;
+}
+#network {
+    margin-left: 0;
+    border-radius: 0 10px 10px 0;
+}
+
+#wireplumber,
+#backlight {
+    color: @teal;
+}
+#wireplumber {
+    padding-right: 5px;
+    margin-right: 0;
+    border-radius: 10px 0 0 10px;
+}
+#backlight {
+    margin-left: 0px;
+    border-radius: 0 10px 10px 0;
+}
+
+#custom-power,
+#custom-suspend,
+#custom-logout,
+#custom-reboot,
+#custom-shutdown {
+    color: @red;
+    padding-left: 8px;
+    margin: 0 3px;
+}
+
+#window {
+    background: @base;
+    border-radius: 10px;
+    padding: 0 15px;
+}
+
+#mpris {
+    color: @yellow;
+    background: @base;
+}
+
+#mpris.playing {
+    color: @base;
+    animation: gradient-shift 10s infinite;
+}
+
+@keyframes gradient-shift {
+    0% {
+        background: @red;
+    }
+    25% {
+        background: @yellow;
+    }
+    50% {
+        background: @mauve;
+    }
+    75% {
+        background: @blue;
+    }
+    100% {
+        background: @red;
+    }
+}
+
+#battery.critical:not(charging) {
+    animation-name: blink;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+@keyframes blink {
+    to {
+        color: @crust;
+    }
+}

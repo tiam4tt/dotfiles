@@ -1,6 +1,6 @@
 <h1 align=center>Hyprland + Arch config</h1>
 
-> A simple Hyprland config with adaptive color scheme, packed with just the bare minimum to keep you away from all the useless "improved quality of life" shenanigans.
+> A simple Hyprland config with adaptive color scheme, packed with just the bare minimum to keep you away from all the "improved quality of life" shenanigans.
 
 # Sections
 
@@ -11,8 +11,6 @@
 > [Grant execute permission to scripts in `~/.config/hypr/scripts/`](#grant-execute-permission-to-scripts-in-confighyprscripts)
 >
 > [Keybinds](#keybinds)
->
-> [Configure to your preference](#configure-to-your-preference)
 
 ## Preview
 
@@ -20,6 +18,7 @@
 ![preview2](./assets/preview2.png)
 ![preview3](./assets/preview3.png)
 ![preview4](./assets/preview4.png)
+![preview4](./assets/preview5.png)
 
 ## Info
 |**Specification**|**Detail**|
@@ -28,9 +27,9 @@
 |**WM** | Hyprland|
 |**Editor**| Neovim|
 |**Browser**| Firefox|
-|**File Manager**| Thunar|
+|**File Manager**| dolphin|
 |**Fetch**| fastfetch|
-|**Launcher**| Fuzzel|
+|**Launcher**| rofi|
 |**Terminal**| Alacritty|
 |**Shell**| Fish|
 |**Notification**| fnott|
@@ -76,16 +75,3 @@ Wallpaper directory by default points to `~/Pictures/wallpapers/`
 |ALT + TAB| Next workspace|
 |ALT + Shift + TAB| Previous workspace|
 |XF86 controls keys| Volume, brightness, etc|
-
-## Configure to your preference
-
-**Monitors**: `~/.config/hypr/monitors/monitors.conf`
-
-**ENV**: `~/.config/hypr/env/env.conf`
-
-**Input devices & touchpad scripts**:
-- `~/.config/hypr/input/input.conf`
-- `~/.config/hypr/scripts/touchpad-status.sh`
-- `~/.config/hypr/scripts/touchpad-toggle.sh`
-
-**Hyprlock wallpaper**: `~/.config/hypr/hyprlock.conf`
