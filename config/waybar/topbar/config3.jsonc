@@ -6,10 +6,11 @@
     "margin": "0",
     "height": 32,
 
-    "modules-left": ["hyprland/workspaces", "mpris"],
-    "modules-center": ["hyprland/window"],
+    "modules-left": ["hyprland/workspaces", "hyprland/window"],
+    "modules-center": ["mpris"],
     "modules-right": [
       "tray",
+      "memory",
       "group/audio-and-light",
       "group/connections",
       "clock",
@@ -20,7 +21,8 @@
       "format": "{title}",
       "icon": false,
       "icon-size": 18,
-      "max-length": 40,
+      // "max-length": 40,
+      "expand": true,
     },
     "hyprland/workspaces": {
       "format": "{icon}",
@@ -31,7 +33,7 @@
       },
     },
     "clock": {
-      "format": " {:%I:%M %p}",
+      "format": "  {:%I:%M %p}",
       "calendar": {
         "format": {
           "months": "<span color='#ffead3'><b>{}</b></span>",

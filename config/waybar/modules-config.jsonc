@@ -50,8 +50,7 @@
   },
 
   "mpris": {
-    "format": "{dynamic}",
-    "format-paused": "<i>{dynamic}</i>",
+    "format": "{status_icon} {dynamic}",
     "interval": 1,
     "dynamic-len": 40,
     "status-icons": {
@@ -80,8 +79,8 @@
     "scroll-step": 5,
     "format": "{icon}{percent}",
     "format-icons": ["󰃞 ", "󰃟 ", "󰃝 ", "󰃠 "],
-    "on-click": "brightnessctl set 10%-",
-    "on-click-right": "brightnessctl set +10%",
+    "on-click": "brightnessctl set 5%-",
+    "on-click-right": "brightnessctl set +5%",
   },
 
   "network": {
@@ -121,17 +120,22 @@
     "on-click-middle": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
     "on-click": "pwvucontrol",
   },
+  "pulseaudio": {
+    "format": "{format_source}",
+    "format-source": "",
+    "format-source-muted": " ",
+    "on-click": "pwvucontrol",
+  },
 
   "bluetooth": {
     "format": "{icon}",
-    "format-icons": ["", "󰤾", "󰥀", "󰥄", "󰥈"],
-
-    "tooltip-format-off": "Bluetooth is off",
-    "tooltip-format-on": "Bluetooth is on",
-
-    "format-connected": "{icon} {num_connections}",
+    "format-icons": ["󰂱", "󰤾", "󰥀", "󰥄", "󰥈"],
+    "format-disabled": "󰂲",
+    "format-connected": "{icon} {device-alias}",
     "format-connected-battery": "{icon} {device_battery_percentage}%",
 
+    "tooltip-format-on": "Bluetooth is on",
+    "tooltip-format-off": "Bluetooth is off",
     "tooltip-format-connected": "{device_enumerate}",
     "tooltip-format-enumerate-connected": "{device_alias}\t{device_battery_percentage}%",
 
@@ -203,7 +207,7 @@
 
   "group/audio-and-light": {
     "orientation": "inherit",
-    "modules": ["wireplumber", "backlight"],
+    "modules": ["pulseaudio", "wireplumber", "backlight"],
   },
   "group/connections": {
     "orientation": "inherit",

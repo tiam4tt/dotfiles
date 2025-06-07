@@ -3,18 +3,16 @@
     "output": ["*"],
     "include": ["~/.config/waybar/modules-config.jsonc"],
     "position": "top",
-    "margin-top": 0,
-    "margin-bottom": 0,
+    "margin-top": 3,
+    "margin-bottom": 3,
 
-    "modules-left": ["hyprland/workspaces", "wlr/taskbar"],
-    "modules-center": ["mpris", "clock"],
+    "modules-left": ["hyprland/workspaces", "hyprland/window"],
+    "modules-center": ["clock"],
     "modules-right": [
       "tray",
-      // "memory",
-      "wireplumber",
-      "backlight",
-      "bluetooth",
-      "network",
+      "memory",
+      "group/audio-and-light",
+      "group/connections",
       "battery",
       "group/power",
     ],
@@ -24,5 +22,9 @@
     "network": {
       "format-wifi": "{icon} {essid}",
     },
-  }
+    "hyprland/window": {
+      "format": "{title}",
+      "expand": true,
+    },
+  },
 ]

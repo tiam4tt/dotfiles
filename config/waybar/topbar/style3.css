@@ -3,13 +3,13 @@
 * {
     all: unset;
     font-family:
-        FiraCode Nerd Font,
         MesloLGM Nerd Font,
-        BlexMono Nerd Font,
         JetBrains Mono Nerd Font,
+        FiraCode Nerd Font,
+        BlexMono Nerd Font,
         Roboto,
         sans-serif;
-    font-size: 14px;
+    font-size: 12px;
     border-radius: 0;
     border: none;
     padding: 0;
@@ -99,9 +99,11 @@ menuitem {
 #mpris,
 #battery,
 #tray,
+#memory,
 #clock,
 #network,
 #wireplumber,
+#pulseaudio,
 #bluetooth,
 #custom-power,
 #custom-suspend,
@@ -110,18 +112,28 @@ menuitem {
 #custom-shutdown,
 #backlight {
     padding: 0 10px;
-    margin-left: 3px;
-    margin-right: 3px;
     border-radius: 10px;
     background: @base;
     color: @blue;
     min-width: 20px;
     color: @crust;
 }
+#tray {
+    margin: 0 3px;
+}
+
+#memory {
+    color: @flamingo;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-right: 3px;
+}
 
 #battery {
     color: @green;
     padding-right: 6px;
+    margin-left: 3px;
+    margin-right: 3px;
 }
 #battery.good {
     color: @blue;
@@ -136,34 +148,44 @@ menuitem {
 
 #clock {
     color: @peach;
+    margin: 0 3px;
 }
 
 #bluetooth,
 #network {
-    color: @blue;
+    color: @mauve;
 }
 
 #bluetooth {
     margin-right: 0;
+    margin-left: 3px;
     padding-right: 5px;
     border-radius: 10px 0 0 10px;
 }
 #network {
     margin-left: 0;
+    margin-right: 3px;
     border-radius: 0 10px 10px 0;
 }
 
 #wireplumber,
+#pulseaudio,
 #backlight {
-    color: @teal;
+    color: @blue;
 }
-#wireplumber {
+#pulseaudio {
     padding-right: 5px;
     margin-right: 0;
+    margin-left: 3px;
     border-radius: 10px 0 0 10px;
+}
+#wireplumber {
+    border-radius: 0;
+    margin: 0;
 }
 #backlight {
     margin-left: 0px;
+    margin-right: 3px;
     border-radius: 0 10px 10px 0;
 }
 
@@ -184,30 +206,29 @@ menuitem {
 }
 
 #mpris {
-    color: @yellow;
+    color: @teal;
     background: @base;
 }
 
 #mpris.playing {
-    color: @base;
     animation: gradient-shift 10s infinite;
 }
 
 @keyframes gradient-shift {
     0% {
-        background: @red;
+        color: @teal;
     }
     25% {
-        background: @yellow;
+        color: @red;
     }
     50% {
-        background: @mauve;
+        color: @mauve;
     }
     75% {
-        background: @blue;
+        color: @blue;
     }
     100% {
-        background: @red;
+        color: @teal;
     }
 }
 

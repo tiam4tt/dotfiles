@@ -1,6 +1,11 @@
 <h1 align=center>Hyprland + Arch config</h1>
 
-> A simple Hyprland config with adaptive color scheme, packed with just the bare minimum to keep you away from all the "improved quality of life" shenanigans.
+
+<div align="center">
+
+![](https://img.shields.io/github/last-commit/tiam4tt/dotfiles?style=for-the-badge&labelColor=11111b&color=b4befe)
+![](https://img.shields.io/github/repo-size/tiam4tt/dotfiles?style=for-the-badge&labelColor=11111b&color=94e2d5)
+</div>
 
 # Sections
 

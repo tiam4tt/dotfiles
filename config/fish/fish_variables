@@ -49,4 +49,4 @@ SETUVAR fish_pager_color_selected_background:\x2d\x2dbackground\x3d44475a
 SETUVAR fish_pager_color_selected_completion:f8f8f2
 SETUVAR fish_pager_color_selected_description:6272a4
 SETUVAR fish_pager_color_selected_prefix:8be9fd
-SETUVAR --export fish_user_paths:/home/tiamatt/\x2elocal/bin\x1e/home/tiamatt/\x2econfig/rofi/scripts
+SETUVAR --export fish_user_paths:/home/tiamatt/\x2elocal/bin\x1e/home/tiamatt/miniconda3/bin\x1e/home/tiamatt/\x2econfig/rofi/scripts

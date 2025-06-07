@@ -1,4 +1,3 @@
-@import "../custom-color.css";
 @import "colors-waybar.css";
 
 * {
@@ -11,19 +10,18 @@
         Roboto,
         Arial,
         sans-serif;
-    font-size: 13px;
-    padding: 0;
-    margin: 0;
-    border: none;
-    border-radius: 6px;
-    box-shadow: none;
+    font-size: 12px;
+    color: @foreground;
 }
 /* ---------modules group--------- */
 
 /* css margin: top right bottom left; */
 
 .modules-right {
-    background-color: @bg;
+    background-color: @background;
+    border-radius: 4px;
+    padding: 0 8px;
+    box-shadow: inset 0 0 0 2px @color6;
 }
 .modules-center,
 .modules-left {
@@ -33,180 +31,90 @@
 .modules-left,
 .modules-center,
 .modules-right {
-    margin: 3px 5px 0;
-    color: @color7;
-    min-height: 28px;
-}
-
-tooltip,
-menu {
-    background-color: @bg;
-    color: @color7;
+    margin: 0 5px;
+    min-height: 26px;
 }
 
 tooltip,
 menu menuitem {
-    padding: 5px;
-}
-
-menu menuitem {
-    border-radius: 0;
-    margin: 3px;
+    background-color: @background;
+    color: @color3;
+    padding: 5px 10px;
 }
 
 window#waybar {
-    /* background: linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)); */
     background-color: transparent;
-}
-
-window#waybar.hidden {
-    opacity: 0.2;
 }
 
 window#waybar.empty #window {
     background-color: transparent;
     color: transparent;
+    box-shadow: none;
+    padding: 0;
+    margin: 0;
 }
 
-/* --------workspaces-------- */
-
+/* ---------LEFT MODULES--------- */
 #workspaces {
-    background-color: @bg;
-    color: @color7;
-    padding: 4px 0;
-}
-
-#workspaces button {
-    min-width: 20px;
-    border: none;
-    margin: 0 4px;
-    color: @foreground;
-    background-color: @bg;
-    transition: all 0.25s ease-out;
-    opacity: 0.4;
-}
-
-#workspaces button.active {
-    color: @bg;
+    background: @background;
+    box-shadow: inset 0 0 0 2px @color6;
     border-radius: 4px;
-    background-color: @color7;
-    min-width: 45px;
+}
+#workspaces button {
+    min-width: 25px;
+    padding: 0;
+    opacity: 0.5;
+    border-radius: 4px;
+    transition: all 0.25s ease-in;
+}
+#workspaces button.active {
+    background: @color6;
+    min-width: 35px;
     opacity: 1;
 }
-
-/* --------modules-------- */
-/*--------GENERAL STYLING-------*/
-
-#custom-power,
-#battery,
-#network,
-#bluetooth,
-#backlight,
-#wireplumber {
-    color: @color5;
+#workspaces button.active label {
+    color: @background;
 }
 
-#clock,
-#mpris {
-    color: @color6;
-}
-
-#window,
-#mpris,
-#mpris.paused,
-#clock,
-#tray,
-#memory,
-#wireplumber,
-#backlight,
-#bluetooth,
-#network,
-#battery,
-#custom-power {
-    margin: 0 6px;
-    background-color: @bg;
-    box-shadow: none;
-    min-width: 20px;
-}
-
-#tray,
-#memory,
-#wireplumber,
-#backlight,
-#bluetooth,
-#network,
-#battery,
-#custom-power {
-    background-color: transparent;
-}
-/*-----------SPECIFIC STYLING-----------*/
-#wireplumber,
-#wireplumber.muted,
-#backlight {
-    min-width: 40px;
-}
-
-#wireplumber.muted {
-    margin-top: 4px;
-    margin-bottom: 4px;
-    background-color: @foreground;
-    color: @bg;
-}
-
-#custom-power {
-    padding-right: 8px;
-}
-
-#custom-suspend,
-#custom-shutdown,
-#custom-reboot,
-#custom-logout {
-    padding: 0 15px;
-    margin: 4px 3px;
-    background-color: @color7;
-    color: @bg;
-    border: none;
-}
-
-#window,
-#mpris,
-#mpris.paused,
-#clock {
-    padding: 0 15px;
-}
-
-#taskbar {
+#window {
+    background: @background;
+    border-radius: 4px;
     margin: 0 5px;
+    padding: 0 10px;
+    box-shadow: inset 0 0 0 2px @color6;
 }
 
-#taskbar button {
+/* --------MID MODULES--------- */
+#clock {
+    background: @background;
+    padding: 0 10px;
+    border-radius: 4px;
+    box-shadow: inset 0 0 0 2px @color6;
+}
+
+/* --------RIGHT MODULES-------- */
+#tray,
+#wireplumber,
+#pulseaudio,
+#backlight,
+#bluetooth,
+#network,
+#battery,
+#custom-power {
     padding: 0 8px;
 }
-#taskbar button.active {
-    background-color: alpha(@color7, 0.3);
+#custom-reboot,
+#custom-suspend,
+#custom-shutdown,
+#custom-logout {
+    padding: 0 15px;
+    color: @background;
+    background: @color6;
 }
 
-#mpris.playing {
-    color: @bg;
-    background: radial-gradient(circle, @peach, @red, @mauve, @purpureus);
-    background-size: 200% 200%;
-    animation: gradient-flow 15s ease infinite;
+#custom-shutdown {
+    border-radius: 0 4px 4px 0;
 }
-
-@keyframes gradient-flow {
-    0% {
-        background-position: 0% 50%;
-    }
-    25% {
-        background-position: 50% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    75% {
-        background-position: 50% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
+#custom-logout {
+    border-radius: 4px 0 0 4px;
 }
