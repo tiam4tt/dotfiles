@@ -25,7 +25,7 @@
 |**Launcher**| rofi|
 |**Terminal**| Alacritty|
 |**Shell**| Fish|
-|**Notification**| fnott|
+|**Notification**| swaync|
 |**Lockscreen**| hyprlock|
 |**Color scheme generator**| pywal|
 |**Fonts**| JetBrains Mono Nerd Font, FiraCode Nerd Font, Blex Mono Nerd Font|
