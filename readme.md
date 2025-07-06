@@ -9,9 +9,9 @@
 
 ## Preview
 
-<img src="./assets/preview1.png" alt="preview1" width="50%"><img src="./assets/preview1.png" alt="preview2" width="50%">
+<img src="./assets/preview1.png" alt="preview1" width="50%"><img src="./assets/preview2.png" alt="preview2" width="50%">
 <img src="./assets/preview3.png" alt="preview3" width="50%"><img src="./assets/preview4.png" alt="preview4" width="50%">
-<img src="./assets/preview4.png" alt="preview5" width="50%">
+<img src="./assets/preview5.png" alt="preview5" width="50%">
 
 ## Info
 |**Specification**|**Detail**|
