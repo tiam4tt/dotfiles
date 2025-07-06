@@ -7,32 +7,34 @@
       "~/.config/waybar/modules-config.jsonc"
     ],
     "position": "top",
-    "margin-top": 3,
+    "margin": "2 5 1",
     "modules-left": [
       "clock",
-      "hyprland/workspaces"
-    ],
-    "modules-center": [
-      "mpris",
+      "hyprland/workspaces",
       "hyprland/window"
     ],
+    "modules-center": [
+      "mpris"
+    ],
     "modules-right": [
-      "tray",
-      "memory",
-      "group/audio-and-light",
-      "group/connections",
+      // "tray",
+      "network",
+      "bluetooth",
+      "wireplumber",
+      "backlight",
+      "custom/notification",
       "battery",
       "group/power",
-      "custom/notification",
     ],
     "battery": {
       "format": "{icon}",
     },
     "network": {
-      "format-wifi": "{icon} {essid}",
+      "format-wifi": " {bandwidthDownBytes} -  {bandwidthUpBytes}",
+      "tooltip-format-wifi": "{essid}",
     },
     "hyprland/window": {
-      "format": "{title}",
+      "format": "{initialTitle}",
       "expand": true,
     },
   },

@@ -1,12 +1,22 @@
 [
   {
-    "output": ["*"],
-    "include": ["~/.config/waybar/modules-config.jsonc"],
+    "output": [
+      "*"
+    ],
+    "include": [
+      "~/.config/waybar/modules-config.jsonc"
+    ],
     "position": "top",
     "margin": "0 0 0 0",
-
-    "modules-left": ["group/power", "hyprland/workspaces", "wlr/taskbar"],
-    "modules-center": ["mpris", "hyprland/window"],
+    "modules-left": [
+      "group/power",
+      "hyprland/workspaces",
+      "wlr/taskbar"
+    ],
+    "modules-center": [
+      "mpris",
+      "hyprland/window"
+    ],
     "modules-right": [
       "tray",
       "wireplumber",

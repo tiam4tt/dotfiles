@@ -1,13 +1,21 @@
 [
   {
-    "output": ["*"],
-    "include": ["~/.config/waybar/modules-config.jsonc"],
+    "output": [
+      "*"
+    ],
+    "include": [
+      "~/.config/waybar/modules-config.jsonc"
+    ],
     "position": "top",
     "margin": "0",
-    "height": 32,
-
-    "modules-left": ["hyprland/workspaces", "hyprland/window"],
-    "modules-center": ["mpris"],
+    // "height": 28,
+    "modules-left": [
+      "hyprland/workspaces",
+      "hyprland/window"
+    ],
+    "modules-center": [
+      "mpris"
+    ],
     "modules-right": [
       "tray",
       "memory",
@@ -32,26 +40,6 @@
         "default": "󱙝",
       },
     },
-    "clock": {
-      "format": "  {:%I:%M %p}",
-      "calendar": {
-        "format": {
-          "months": "<span color='#ffead3'><b>{}</b></span>",
-          "days": "<span color='#ecc6d9'><b>{}</b></span>",
-          "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
-          "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
-          "today": "<span color='#ff6699'><b><u>{}</u></b></span>",
-        },
-        "on-click-right": "mode",
-      },
-      "actions": {
-        "on-click-right": "mode",
-        "on-click-forward": "tz_up",
-        "on-click-backward": "tz_down",
-        "on-scroll-up": "shift_up",
-        "on-scroll-down": "shift_down",
-      },
-    },
     "network": {
       "format-wifi": "{icon}",
     },
@@ -61,7 +49,9 @@
       },
     },
     "mpris": {
-      "ignored-players": ["firefox"],
+      "ignored-players": [
+        "firefox"
+      ],
     },
   },
 ]

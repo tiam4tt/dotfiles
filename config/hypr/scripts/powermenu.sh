@@ -2,7 +2,7 @@
 
 menu=("Shutdown" "Reboot" "Suspend" "Lock" "Logout" "AC/BAT Refresh Rate" "Change wallpaper" "Waybar Profile")
 
-choice=$(printf "%s\n" "${menu[@]}" | rofi -dmenu -i -p "Power Menu: ")
+choice=$(printf "%s\n" "${menu[@]}" | rofi -dmenu -i -p "Power Menu")
 
 case $choice in
     Shutdown)

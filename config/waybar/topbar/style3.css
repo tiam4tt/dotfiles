@@ -10,6 +10,7 @@
         Roboto,
         sans-serif;
     font-size: 12px;
+    font-weight: 500;
     border-radius: 0;
     border: none;
     padding: 0;
@@ -25,24 +26,30 @@
 .modules-right,
 .modules-center,
 .modules-left {
-    margin: 4px 5px;
+    margin: 2px 5px;
     padding: 3px 0px;
 }
 
 window#waybar {
     background: @crust;
+    /* background: transparent; */
 }
 
 window#waybar.empty #window {
     background: transparent;
 }
 
-tooltip,
-menu,
-menuitem {
+menu {
     background: @crust;
-    border-radius: 10px;
-    padding: 5px;
+    border-radius: 8px;
+}
+menu menuitem {
+    color: @color3;
+    padding: 5px 10px;
+}
+tooltip {
+    background: @crust;
+    border-radius: 8px;
 }
 
 #custom-mpris_prev,
@@ -55,11 +62,11 @@ menuitem {
     padding: 0 10px;
 }
 #custom-mpris_prev {
-    border-radius: 10px 0 0 10px;
+    border-radius: 8px 0 0 8px;
     padding-left: 8px;
 }
 #custom-mpris_next {
-    border-radius: 0 10px 10px 0;
+    border-radius: 0 8px 8px 0;
     padding-right: 10px;
 }
 
@@ -71,7 +78,7 @@ menuitem {
 
 #workspaces {
     background: @base;
-    border-radius: 10px;
+    border-radius: 8px;
     padding: 3px 8px 4px 5px;
     /* padding: 4px 5px; */
     margin-right: 5px;
@@ -82,7 +89,7 @@ menuitem {
     opacity: 0.3;
     min-width: 25px;
     transition: all 0.25s ease-out;
-    border-radius: 10px;
+    border-radius: 8px;
 }
 #workspaces button label {
     color: @overlay2;
@@ -112,7 +119,7 @@ menuitem {
 #custom-shutdown,
 #backlight {
     padding: 0 10px;
-    border-radius: 10px;
+    border-radius: 8px;
     background: @base;
     color: @blue;
     min-width: 20px;
@@ -131,8 +138,6 @@ menuitem {
 
 #battery {
     color: @green;
-    padding-right: 6px;
-    margin-left: 3px;
     margin-right: 3px;
 }
 #battery.good {
@@ -160,12 +165,12 @@ menuitem {
     margin-right: 0;
     margin-left: 3px;
     padding-right: 5px;
-    border-radius: 10px 0 0 10px;
+    border-radius: 8px 0 0 8px;
 }
 #network {
     margin-left: 0;
     margin-right: 3px;
-    border-radius: 0 10px 10px 0;
+    border-radius: 0 8px 8px 0;
 }
 
 #wireplumber,
@@ -177,7 +182,7 @@ menuitem {
     padding-right: 5px;
     margin-right: 0;
     margin-left: 3px;
-    border-radius: 10px 0 0 10px;
+    border-radius: 8px 0 0 8px;
 }
 #wireplumber {
     border-radius: 0;
@@ -186,7 +191,7 @@ menuitem {
 #backlight {
     margin-left: 0px;
     margin-right: 3px;
-    border-radius: 0 10px 10px 0;
+    border-radius: 0 8px 8px 0;
 }
 
 #custom-power,
@@ -201,7 +206,7 @@ menuitem {
 
 #window {
     background: @base;
-    border-radius: 10px;
+    border-radius: 8px;
     padding: 0 15px;
 }
 

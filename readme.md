@@ -1,4 +1,4 @@
-<h1 align=center>Hyprland + Arch config</h1>
+<h1 align=center>Hyprland on Arch</h1>
 
 
 <div align="center">
@@ -7,23 +7,11 @@
 ![](https://img.shields.io/github/repo-size/tiam4tt/dotfiles?style=for-the-badge&labelColor=11111b&color=94e2d5)
 </div>
 
-# Sections
-
-> [Preview](#preview)
->
-> [Info](#info)
->
-> [Grant execute permission to scripts in `~/.config/hypr/scripts/`](#grant-execute-permission-to-scripts-in-confighyprscripts)
->
-> [Keybinds](#keybinds)
-
 ## Preview
 
-![preview1](./assets/preview1.png)
-![preview2](./assets/preview2.png)
-![preview3](./assets/preview3.png)
-![preview4](./assets/preview4.png)
-![preview4](./assets/preview5.png)
+<img src="./assets/preview1.png" alt="preview1" width="50%"><img src="./assets/preview1.png" alt="preview2" width="50%">
+<img src="./assets/preview3.png" alt="preview3" width="50%"><img src="./assets/preview4.png" alt="preview4" width="50%">
+<img src="./assets/preview4.png" alt="preview5" width="50%">
 
 ## Info
 |**Specification**|**Detail**|
@@ -32,7 +20,7 @@
 |**WM** | Hyprland|
 |**Editor**| Neovim|
 |**Browser**| Firefox|
-|**File Manager**| dolphin|
+|**File Manager**| nemo|
 |**Fetch**| fastfetch|
 |**Launcher**| rofi|
 |**Terminal**| Alacritty|
@@ -42,15 +30,6 @@
 |**Color scheme generator**| pywal|
 |**Fonts**| JetBrains Mono Nerd Font, FiraCode Nerd Font, Blex Mono Nerd Font|
 |**Music Player**| Tauon Music Box|
-
-## Grant execute permission to scripts in `~/.config/hypr/scripts/`
-
-In case the scripts are not executable, `chmod` them.
-
-```bash
-chmod +x $HOME/.config/hypr/scripts/*
-```
-Wallpaper directory by default points to `~/Pictures/wallpapers/`
 
 ## Keybinds
 | Label | Action |

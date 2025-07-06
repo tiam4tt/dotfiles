@@ -3,9 +3,9 @@
 * {
     all: unset;
     font-family:
-        MesloLGM Nerd Font,
-        FiraCode Nerd Font,
         BlexMono Nerd Font,
+        FiraCode Nerd Font,
+        MesloLGM Nerd Font,
         FontAwesome,
         Roboto,
         Arial,
@@ -21,7 +21,7 @@
 .modules-right {
     background-color: @background;
     border-radius: 6px;
-    padding: 0 5px;
+    /* padding: 0 5px; */
     /* box-shadow: inset 0 0 0 2px @color7; */
 }
 .modules-center,
@@ -32,7 +32,7 @@
 .modules-left,
 .modules-center,
 .modules-right {
-    margin: 0 5px;
+    margin: 5px;
     min-height: 26px;
 }
 
@@ -50,7 +50,8 @@ tooltip {
 }
 
 window#waybar {
-    background-color: transparent;
+    background-color: @background;
+    border-radius: 4px;
 }
 
 window#waybar.empty #window {
@@ -63,13 +64,14 @@ window#waybar.empty #window {
 
 /* ----------------------------- */
 #workspaces {
-    background: @background;
+    background: alpha(@foreground, 0.1);
     /* box-shadow: inset 0 0 0 2px @color7; */
     border-radius: 6px;
-    padding: 4px;
+    padding: 0;
 }
 #workspaces button {
     min-width: 25px;
+    min-height: 25px;
     padding: 0;
     opacity: 0.5;
     border-radius: 4px;
@@ -77,11 +79,11 @@ window#waybar.empty #window {
 }
 #workspaces button.active {
     background: @color7;
-    min-width: 35px;
     opacity: 1;
 }
 #workspaces button.active label {
     color: @background;
+    font-weight: bold;
 }
 
 #window {
@@ -93,14 +95,7 @@ window#waybar.empty #window {
 
 /* ----------------------------- */
 #clock,
-#mpris {
-    background: @background;
-    padding: 0 10px;
-    border-radius: 6px;
-    /* box-shadow: inset 0 0 0 2px @color7; */
-}
-
-/* ----------------------------- */
+#mpris,
 #tray,
 #wireplumber,
 #pulseaudio,
@@ -110,24 +105,44 @@ window#waybar.empty #window {
 #battery,
 #custom-notification,
 #custom-power {
-    padding: 0 8px;
+    background: alpha(@foreground, 0.1);
+    border-radius: 4px;
+    padding: 0 10px;
+    min-height: 25px;
 }
+
+#network,
+#clock {
+    background: alpha(@foreground, 0.2);
+}
+
+#battery {
+    background: @color7;
+    color: @background;
+}
+#custom-notification {
+    padding-right: 12px;
+}
+#custom-power {
+    background: @color7;
+    color: @background;
+    padding-right: 12px;
+}
+
+/* ----------------------------- */
 #custom-reboot,
 #custom-suspend,
 #custom-shutdown,
 #custom-logout {
     padding: 0 15px;
-    color: @background;
-    background: @color7;
+    color: @foreground;
+    background: alpha(@color7, 0.2);
 }
 
 #custom-shutdown {
     border-radius: 0 4px 4px 0;
+    margin-right: 3px;
 }
 #custom-logout {
     border-radius: 4px 0 0 6px;
-}
-
-#custom-notification {
-    font-family: "FiraCode Nerd Font";
 }

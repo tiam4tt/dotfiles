@@ -16,7 +16,7 @@ wal -s -t -i "$wallpaper_dir/$choice"
 
 cp -rf $HOME/.cache/wal/colors-waybar.css $HOME/.config/waybar/topbar
 
-pkill dunst
+pkill swaync
 pkill hyprpaper && hyprctl -q dispatch exec hyprpaper
 
 hyprctl -q reload

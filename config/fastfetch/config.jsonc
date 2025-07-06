@@ -1,19 +1,19 @@
 {
   "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  // "logo": {
+  //   "type": "small",
+  //   "padding": {
+  //     "top": 2,
+  //     "left": 2,
+  //     "right": 3,
+  //   },
   "logo": {
-    "type": "small",
+    "source": "~/.config/fastfetch/icons/uwu.txt",
     "padding": {
-      "top": 2,
+      "top": 1,
       "left": 2,
       "right": 3,
     },
-    // "logo": {
-    //   "source": "~/.config/fastfetch/icons/uwu.txt",
-    //   "padding": {
-    //     "top": 1,
-    //     "left": 2,
-    //     "right": 3,
-    //   },
     "color": {
       "1": "magenta",
       "2": "blue",
@@ -22,51 +22,56 @@
   "display": {
     "separator": "",
     "color": {
-      "keys": "blue",
+      "keys": "yellow",
     },
     "key": {
       "type": "both",
       "width": 15,
-      "paddingLeft": 3,
+      "paddingLeft": 0,
     },
   },
   "modules": [
     "break",
     {
       "type": "title",
-      "format": "┏━          \u001B[32m{2}\u001b[0m@\u001B[35m{1}\u001B[0m          ━┓",
+      // "format": "┏━          \u001B[32m{2}\u001b[0m@\u001B[35m{1}\u001B[0m          ━┓",
+      "format": "\u001B[34m{2}\u001b[0m@\u001B[36m{1}\u001B[0m",
     },
     "break",
     {
       "type": "os",
-      "key": "Distro ",
-      "keyIcon": "󰣇",
+      "key": "Distro",
+      "keyIcon": "󰣇 ",
     },
     {
       "type": "kernel",
-      "keyIcon": "󰌽",
+      "keyIcon": "󰌽 ",
     },
     {
       "type": "packages",
-      "keyIcon": "󰮯",
+      "keyIcon": "󰮯 ",
     },
     {
       "type": "uptime",
-      "keyIcon": "",
+      "keyIcon": " ",
     },
     {
       "type": "memory",
-      "keyIcon": "󰍛",
+      "keyIcon": " ",
+    },
+    {
+      "type": "terminal",
+      "keyIcon": " ",
     },
     "break",
-    {
-      "type": "custom",
-      "format": "┗━                                       ━┛",
-    },
+    // {
+    //   "type": "custom",
+    //   "format": "┗━                                       ━┛",
+    // },
     {
       "type": "colors",
       "symbol": "diamond",
-      "paddingLeft": 13,
+      // "paddingLeft": 13,
     },
     "break",
   ],

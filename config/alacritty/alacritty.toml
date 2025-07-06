@@ -1,5 +1,5 @@
 [general]
-import = ["~/.config/alacritty/color-schemes/astrology_vibrant_stellar.toml"]
+import = ["~/.config/alacritty/color-schemes/catppuccin-mocha.toml"]
 
 [env]
 TERM = "xterm-256color"
