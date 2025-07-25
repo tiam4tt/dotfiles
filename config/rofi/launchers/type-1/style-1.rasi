@@ -22,7 +22,7 @@ configuration {
 /*****----- Global Properties -----*****/
 /* @import                          "shared/colors.rasi"*/
 @import                          "shared/fonts.rasi"
-@import                          "~/.config/rofi/colors/catppuccin.rasi"
+@import                            "~/.cache/wal/colors-rofi-custom.rasi"
 
 * {
     border-colour:               var(selected);
@@ -65,7 +65,7 @@ window {
     enabled:                     true;
     margin:                      0px;
     padding:                     0px;
-    border:                      1px solid;
+    border:                      0px solid;
     border-radius:               8px;
     border-color:                @border-colour;
     cursor:                      "default";
@@ -190,7 +190,7 @@ element {
     margin:                      0px;
     padding:                     5px 10px;
     border:                      0px solid;
-    border-radius:               0px;
+    border-radius:               8px;
     border-color:                @border-colour;
     background-color:            transparent;
     text-color:                  @foreground-colour;
@@ -262,7 +262,7 @@ mode-switcher{
 button {
     padding:                     15px 10px;
     border:                      0px solid;
-    border-radius:               0px;
+    border-radius:               8px;
     border-color:                @border-colour;
     background-color:            @alternate-background;
     text-color:                  inherit;

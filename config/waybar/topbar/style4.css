@@ -18,21 +18,11 @@
 
 /* css margin: top right bottom left; */
 
-.modules-right {
-    background-color: @background;
-    border-radius: 6px;
-    /* padding: 0 5px; */
-    /* box-shadow: inset 0 0 0 2px @color7; */
-}
-.modules-center,
-.modules-left {
-    background-color: transparent;
-}
-
 .modules-left,
 .modules-center,
 .modules-right {
     margin: 5px;
+    background-color: transparent;
     min-height: 26px;
 }
 
@@ -50,7 +40,7 @@ tooltip {
 }
 
 window#waybar {
-    background-color: @background;
+    background-color: alpha(@background, 0.78);
     border-radius: 4px;
 }
 
@@ -66,7 +56,7 @@ window#waybar.empty #window {
 #workspaces {
     background: alpha(@foreground, 0.1);
     /* box-shadow: inset 0 0 0 2px @color7; */
-    border-radius: 6px;
+    border-radius: 4px;
     padding: 0;
 }
 #workspaces button {
@@ -87,10 +77,9 @@ window#waybar.empty #window {
 }
 
 #window {
-    background: @background;
+    background: transparent;
     border-radius: 6px;
     padding: 0 10px;
-    /* box-shadow: inset 0 0 0 2px @color7; */
 }
 
 /* ----------------------------- */
@@ -126,7 +115,7 @@ window#waybar.empty #window {
 #custom-power {
     background: @color7;
     color: @background;
-    padding-right: 12px;
+    padding-right: 14px;
 }
 
 /* ----------------------------- */

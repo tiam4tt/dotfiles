@@ -23,7 +23,7 @@
   "hyprland/window": {
     "format": "{initialTitle}",
     "max-length": 40,
-    "all-outputs": true,
+    "separate-outputs": true,
   },
   "hyprland/workspaces": {
     "format": "{icon}",
