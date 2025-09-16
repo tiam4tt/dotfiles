@@ -19,9 +19,8 @@
 /* css margin: top right bottom left; */
 
 .modules-right {
-    background-color: @background;
+    background: alpha(@background, 0.5);
     border-radius: 6px;
-    padding: 0 5px;
     /* box-shadow: inset 0 0 0 2px @color7; */
 }
 .modules-center,
@@ -32,12 +31,13 @@
 .modules-left,
 .modules-center,
 .modules-right {
-    margin: 0 5px;
-    min-height: 26px;
+    margin: 2px 5px;
+    /* padding: 3px 5px; */
+    min-height: 30px;
 }
 
 menu {
-    background: @background;
+    background: alpha(@background, 0.5);
     border-radius: 4px;
 }
 menu menuitem {
@@ -45,7 +45,7 @@ menu menuitem {
     padding: 5px 10px;
 }
 tooltip {
-    background: @background;
+    background: alpha(@background, 0.5);
     border-radius: 4px;
 }
 
@@ -63,7 +63,7 @@ window#waybar.empty #window {
 
 /* ----------------------------- */
 #workspaces {
-    background: @background;
+    background: alpha(@background, 0.5);
     /* box-shadow: inset 0 0 0 2px @color7; */
     border-radius: 6px;
     padding: 4px;
@@ -85,16 +85,15 @@ window#waybar.empty #window {
 }
 
 #window {
-    background: @background;
+    background: alpha(@background, 0.5);
     border-radius: 6px;
-    padding: 0 10px;
-    /* box-shadow: inset 0 0 0 2px @color7; */
+    padding: 0px 10px;
 }
 
 /* ----------------------------- */
 #clock,
 #mpris {
-    background: @background;
+    background: alpha(@background, 0.5);
     padding: 0 10px;
     border-radius: 6px;
     /* box-shadow: inset 0 0 0 2px @color7; */

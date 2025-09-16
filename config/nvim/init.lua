@@ -8,4 +8,4 @@ vim.cmd("set shiftwidth=4")
 -- local builtin = require('telescope.builtin')
 vim.cmd("set relativenumber")
 vim.cmd("colorscheme tokyonight-night")
--- vim.cmd("colorscheme poimandres")
+vim.opt.guicursor = ""

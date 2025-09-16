@@ -36,8 +36,8 @@ while true; do
 
             # Apply new monitor config
             echo "Switching to ${NEW_RATE}Hz ($CURRENT_STATE)"
-            echo "${MONITOR},${RES}@${NEW_RATE},${POS},${SCALE},${EXTRA}"
-            hyprctl keyword monitor "${MONITOR},${RES}@${NEW_RATE},${POS},${SCALE},${EXTRA}"
+            echo "${MONITOR},1920x1080@${NEW_RATE},${POS},${SCALE},${EXTRA}"
+            hyprctl keyword monitor "${MONITOR},1920x1080@${NEW_RATE},${POS},${SCALE},${EXTRA}"q
             notify-send "Refresh Rate" "Now using ${NEW_RATE}Hz on ${CURRENT_STATE} mode"
         fi
     fi

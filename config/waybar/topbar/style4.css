@@ -83,6 +83,7 @@ window#waybar.empty #window {
 }
 
 /* ----------------------------- */
+#memory,
 #clock,
 #mpris,
 #tray,
@@ -102,7 +103,7 @@ window#waybar.empty #window {
 
 #network,
 #clock {
-    background: alpha(@foreground, 0.2);
+    background: alpha(@foreground, 0.15);
 }
 
 #battery {

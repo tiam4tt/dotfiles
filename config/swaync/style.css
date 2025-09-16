@@ -1,0 +1,366 @@
+@import url('../../.cache/wal/colors-waybar.css');
+
+@define-color blurred-background alpha(@background, 0.8);
+
+* {
+    all: unset;
+    font-size: 13px;
+    font-family: 'FiraCode Nerd Font';
+    transition: 200ms;
+    border: none;
+    box-shadow: none;
+    font-weight: 500;
+}
+
+@keyframes slideIn {
+    0% {
+        margin-left: 200px;
+    }
+    100% {
+        margin-left: 0;
+    }
+}
+
+/*############### NOTIFICATION ROW ################*/
+
+.floating-notifications
+    .notification-row
+{
+    animation: slideIn 0.5s ease-in-out;
+}
+
+.floating-notifications.background
+    .notification-row
+    .notification-background,
+.control-center
+    .notification-row
+    .notification-background
+{
+    background: @background;
+    border-radius: 8px;
+    margin: 5px;
+}
+
+.control-center
+    .notification-row
+    .notification-background
+{
+    background: @blurred-background;
+    border: 1px solid alpha(@foreground, 0.2);
+    padding-right: 8px;
+}
+
+.floating-notifications.background
+    .notification-row
+    .notification-background
+    .notification,
+.control-center
+    .notification-row
+    .notification-background
+    .notification
+{
+    padding: 8px;
+}
+
+.floating-notifications.background
+    .notification-row
+    .notification-background
+    .notification-content
+    .summary,
+.control-center
+    .notification-row
+    .notification-background
+    .notification-content
+    .summary
+{
+    color: @color7;
+}
+
+.floating-notifications.background
+    .notification-row
+    .notification-background
+    .notification-content
+    .time,
+.control-center
+    .notification-row
+    .notification-background
+    .notification-content
+    .time
+{
+    color: @foreground;
+}
+
+.floating-notifications.background
+    .notification-row
+    .notification-background
+    .notification-content
+    .body,
+.control-center
+    .notification-row
+    .notification-background
+    .notification-content
+    .body
+{
+    color: @foreground;
+    padding-top: 5px;
+}
+
+
+/* -------- Appication Image --------- */
+
+.floating-notifications.background
+    .notification-row
+    .notification-background
+    .notification
+    .notification-content
+    .image,
+.control-center
+    .notification-row
+    .notification-background
+    .notification
+    .notification-content
+    .image
+{
+    padding: 5px;
+    border-radius: 12px;
+    margin-right: 10px;
+}
+
+.floating-notifications.background
+    .notification-row
+    .notification-background
+    .notification-content
+    .app-icon,
+.control-center
+    .notification-row
+    .notification-background
+    .notification-content
+    .app-icon
+{
+    margin-right: 10px;
+}
+
+/* -------- Close Button --------- */
+
+.floating-notifications.background
+    .notification-row
+    .notification-background
+    .close-button,
+.control-center
+    .notification-row
+    .notification-background
+    .close-button
+{
+    background: alpha(@color7, 0.1);
+    border-radius: 6px;
+    min-height: 20px;
+    min-width: 20px;
+    margin-top: 3px;
+    margin-right: 3px;
+}
+
+.floating-notifications.background
+    .notification-row
+    .notification-background
+    .close-button:hover,
+.control-center
+    .notification-row
+    .notification-background
+    .close-button:hover
+{
+    background: alpha(@color7, 0.5);
+    border-radius: 10px;
+}
+
+.floating-notifications.background
+    .notification-row
+    .notification-background
+    .close-button:active,
+.control-center
+    .notification-row
+    .notification-background
+    .close-button:active
+{
+    background: alpha(@color7, 0.4);
+}
+
+/*############### CONTROL CENTER ################*/
+
+.control-center > * {
+    margin: 8px 0;
+}
+
+.control-center {
+    background: @blurred-background;
+    border: 1px solid alpha(@foreground, 0.1);
+    border-radius: 8px;
+    padding: 10px 20px;
+}
+
+.control-center .control-center-list-placeholder {
+    color: @foreground;
+}
+
+
+/* -------- Volume Slider --------- */
+
+.widget-volume,
+.widget-backlight {
+    padding: 8px 15px;
+    border-radius: 8px;
+    background: alpha(@color7, 0.1);
+    border: 1px solid alpha(@foreground, 0.1);
+}
+
+trough {
+    border-radius: 20px;
+    background: transparent;
+}
+
+trough highlight {
+    padding: 5px;
+    background: alpha(@color7, 0.4);
+    border-radius: 20px;
+    transition: all 0.7s ease;
+}
+trough highlight:hover {
+    padding: 5px;
+    background: alpha(@color7, 0.2);
+    border-radius: 20px;
+    transition: all 0.7s ease;
+}
+
+/* -------- Widget Title --------- */
+
+.widget-title label {
+    font-size: 16px;
+    color: @foreground;
+    font-weight: bold;
+}
+
+.widget-title
+    .control-center-clear-all label
+{
+    color: @background;
+}
+
+.widget-title
+    .control-center-clear-all
+{
+    background: @color7;
+    min-width: 40px;
+    min-height: 25px;
+    border-radius: 8px;
+}
+
+.widget-title
+    .control-center-clear-all:hover
+{
+    border-radius: 15px;
+    background: alpha(@color7, 0.6);        
+}
+
+/* -------- MPRIS --------- */
+
+.widget-mpris {
+    /* background: alpha(@color7, 0.1); */
+    /* border: 1px solid alpha(@foreground, 0.1); */
+    background: transparent;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.widget-mpris button {
+    border-radius: 8px;
+    padding: 5px;
+    margin: 0 5px;
+}
+.widget-mpris button:hover {
+    background: alpha(@color7, 0.6);
+}
+
+.widget-mpris .widget-mpris-player {
+    border-radius: 8px;
+    padding: 3px;
+    min-height: 120px;
+}
+
+.widget-mpris .widget-mpris-player .mpris-background {
+    border-radius: 8px;
+    background-size: cover;
+    background-position: center;
+    filter: blur(10px);
+    opacity: 0.3;
+}
+
+.widget-mpris .widget-mpris-player .widget-mpris-album-art {
+    border-radius: 12px;
+    margin-left: 10px;
+    min-width: 60px;
+    min-height: 60px;
+}
+
+.widget-mpris .widget-mpris-player .widget-mpris-subtitle,
+.widget-mpris .widget-mpris-player .widget-mpris-title {
+    font-weight: bold;
+    font-size: 16px;
+    margin: 0 10px;
+    padding: 8px;
+    border-radius: 8px;
+    background-color: alpha(@background, 0.7);
+    color: @foreground;
+}
+
+
+/* -------- DND --------- */
+
+.widget-dnd > switch {
+    min-height: 20px;
+    background: alpha(@color7, 0.1);
+    border-radius: 10px;
+    color: @foreground;
+    border: 1px solid alpha(@color7, 0.1);
+}
+
+.widget-dnd switch:checked > slider {
+    color: @background;
+}
+
+.widget-dnd > switch > slider {
+    border-radius: 10px;
+    background: @color7;
+    min-width: 20px;
+}
+.widget-dnd label {
+    color: @foreground;
+}
+
+/* -------- Buttons Grid --------- */
+
+.widget-buttons-grid {
+    border-radius: 8px;
+    background: transparent;
+    /* background: alpha(@color7, 0.1);
+    border: 1px solid alpha(@color7, 0.1);
+    padding: 5px; */
+}
+
+.widget-buttons-grid > flowbox > flowboxchild button {
+    min-width: 120px;
+    min-height: 45px;
+    background: alpha(@color7, 0.2);
+    color: @foreground;
+    margin: 5px;
+    border-radius: 60px;
+}
+
+.widget-buttons-grid > flowbox > flowboxchild button:hover {
+    background: alpha(@color7, 0.4);
+}
+
+.widget-buttons-grid > flowbox > flowboxchild button.toggle:checked label {
+    color: @background;
+}
+.widget-buttons-grid > flowbox > flowboxchild button.toggle:checked {
+    background: @color7;
+}

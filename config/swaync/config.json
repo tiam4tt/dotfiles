@@ -1,0 +1,94 @@
+{
+  "$schema": "/etc/xdg/swaync/configSchema.json",
+
+  "positionX": "right",
+  "positionY": "top",
+  "cssPriority": "user",
+
+  "layer": "overlay",
+  "control-center-layer": "top",
+  "layer-shell": true,
+
+  "control-center-width": 380,
+  "control-center-margin-top": 8,
+  "control-center-margin-bottom": 8,
+  "control-center-margin-right": 5,
+  "control-center-margin-left": 8,
+
+  "notification-2fa-action": true,
+  "notification-inline-replies": false,
+  "notification-window-width": 400,
+  "notification-body-image-height": 180,
+  "notification-body-image-width": 200,
+
+  "timeout": 6,
+  "timeout-low": 3,
+  "timeout-critical": 0,
+
+  "fit-to-screen": true,
+  "keyboard-shortcuts": true,
+  "image-visibility": "when-available",
+  "transition-time": 100,
+  "hide-on-clear": false,
+  "hide-on-action": true,
+  "script-fail-notify": true,
+  "widgets": [
+    "buttons-grid",
+    "mpris",
+    "title",
+    "notifications",
+    "dnd"
+  ],
+  "widget-config": {
+    "title": {
+      "text": "Notifications",
+      "clear-all-button": true,
+      "button-text": "󰆴"
+    },
+    "label": {
+      "max-lines": 1,
+      "text": "Notification Center!"
+    },
+    "dnd": {
+      "text": "Do Not Disturb"
+    },
+    "mpris": {
+      "show-album-art": "always",
+      "blacklist": ["playerctld"]
+    },
+    "volume": {
+      "label": "󰕾 "
+    },
+    "backlight": {
+      "label": "󰃟 "
+    },
+    "buttons-grid": {
+      "actions": [
+        {
+          "label": "  Network",
+          "command": "iwmenu --launcher rofi"
+        },
+        {
+          "label": " Bluetooth",
+          "command": "blueman-manager"
+        },
+        {
+          "label": "󰝟 Mute",
+          "command": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+          "type": "toggle"
+        },
+        {
+          "label": " Microphone",
+          "command": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
+          "type": "toggle"
+        },
+        {
+          "label": " 144Hz",
+          "type": "toggle",
+          "command": "sh -c ~/.config/swaync/scripts/refresh_rate_toggle.sh",
+          "update-command": "sh -c '[[ $(cat /tmp/power_state 2>/dev/null) == \"AC\" ]] && echo true || echo false'"
+        }
+      ]
+    }
+  }
+}

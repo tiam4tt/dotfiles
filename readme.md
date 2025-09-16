@@ -31,6 +31,8 @@
 |**Fonts**| JetBrains Mono Nerd Font, FiraCode Nerd Font, Blex Mono Nerd Font|
 |**Music Player**| Tauon Music Box|
 
+> Original creator of the rofi config im using is [adi1090x](https://github.com/adi1090x/rofi.git).
+
 ## Keybinds
 | Label | Action |
 | --- | --- |

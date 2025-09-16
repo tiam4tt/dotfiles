@@ -17,9 +17,10 @@
       "mpris"
     ],
     "modules-right": [
-      // "tray",
       "network",
+      "memory",
       "bluetooth",
+      "pulseaudio",
       "wireplumber",
       "backlight",
       "custom/notification",

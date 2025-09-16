@@ -4,10 +4,10 @@
 * {
     all: unset;
     font-family:
-        MesloLGM Nerd Font,
+        JetBrains Mono Nerd Font,
         BlexMono Nerd Font,
         FiraCode Nerd Font,
-        JetBrains Mono Nerd Font,
+        MesloLGM Nerd Font,
         Roboto,
         sans-serif;
     font-size: 12px;
@@ -20,13 +20,13 @@
     background-color: transparent;
     background: transparent;
     color: @color7;
-    font-weight: normal;
+    font-weight: 500;
 }
 
 window#waybar,
 tooltip,
 menu {
-    background-color: alpha(@background, 0.9);
+    background-color: alpha(@background, 0.6);
     /* background-color: transparent; */
 }
 
@@ -64,15 +64,6 @@ menu menuitem {
     border-bottom: 2px solid @color7;
     padding-bottom: 2px;
     background-color: alpha(@color7, 0.1);
-}
-
-#taskbar button {
-    padding: 0 5px;
-    opacity: 0.6;
-}
-#taskbar button.active {
-    opacity: 1;
-    border-bottom: 2px solid @color7;
 }
 
 #mpris {
@@ -121,18 +112,27 @@ menu menuitem {
     }
 }
 
+#pulseaudio {
+    min-width: 18px;
+    margin: 0 3px;
+}
+
 #tray,
 #wireplumber,
 #backlight,
 #network,
+#custom-notification,
 #custom-power,
 #custom-suspend,
 #custom-logout,
 #custom-reboot,
 #custom-shutdown {
-    min-width: 25px;
-    padding: 0 3px;
-    margin: 0 3px;
+    min-width: 30px;
+    padding: 0 5px;
+}
+
+#custom-power {
+    min-width: 20px;
 }
 
 #bluetooth,
@@ -148,11 +148,6 @@ menu menuitem {
 #bluetooth:hover,
 #battery:hover {
     border-bottom: 2px solid @color7;
-}
-
-#clock {
-    margin: 0 10px 0 0;
-    padding-left: 8px;
 }
 
 #battery.critical:not(charging) {
